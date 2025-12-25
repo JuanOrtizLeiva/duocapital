@@ -10,6 +10,36 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- PROTECCIÓN: Validación de dominio -->
+    <script>
+    (function(){
+        var dominiosPermitidos = ['duocapital.cl', 'www.duocapital.cl', 'localhost', '127.0.0.1'];
+        var hostActual = window.location.hostname;
+        var permitido = dominiosPermitidos.some(function(d){ return hostActual.indexOf(d) !== -1; });
+        if(!permitido && hostActual !== ''){
+            document.body.innerHTML = '<div style="display:flex;align-items:center;justify-content:center;height:100vh;font-family:sans-serif;text-align:center;padding:20px;"><div><h1 style="color:#ef4444;">Acceso no autorizado</h1><p style="color:#666;margin-top:10px;">Este contenido solo puede visualizarse en el sitio oficial.</p></div></div>';
+            throw new Error('Dominio no autorizado');
+        }
+    })();
+    </script>
+
+    <!-- PROTECCIÓN: Bloquear clic derecho y teclas -->
+    <script>
+    document.addEventListener('contextmenu', function(e){ e.preventDefault(); });
+    document.addEventListener('keydown', function(e){
+        if(e.key === 'F12' || 
+           (e.ctrlKey && e.shiftKey && e.key === 'I') || 
+           (e.ctrlKey && e.shiftKey && e.key === 'J') ||
+           (e.ctrlKey && e.key === 'u') ||
+           (e.ctrlKey && e.key === 'U') ||
+           (e.ctrlKey && e.key === 's') ||
+           (e.ctrlKey && e.key === 'S')){
+            e.preventDefault();
+            return false;
+        }
+    });
+    </script>
+
     
     <style>
         /* Sistema de Diseño Premium */
@@ -18,6 +48,10 @@
             padding: 0;
             box-sizing: border-box;
         }
+        
+        /* PROTECCIÓN: Dificultar selección */
+        html { -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+        input, textarea { -webkit-user-select: text; -moz-user-select: text; -ms-user-select: text; user-select: text; }
         
         :root {
             /* Paleta Corporativa Premium */
@@ -1172,57 +1206,57 @@
             bottom: 24px; 
             right: 24px; 
             width: auto; 
-            height: 48px; 
-            background: linear-gradient(135deg, #b45309, #92400e);
+            height: 56px; 
+            background: linear-gradient(135deg, var(--gold-primary), var(--gold-dark));
             border: none; 
-            border-radius: 24px; 
+            border-radius: 28px; 
             cursor: pointer; 
-            box-shadow: 0 4px 20px rgba(180, 83, 9, 0.4); 
+            box-shadow: 0 4px 20px rgba(201, 169, 97, 0.4); 
             z-index: 99999; 
             display: flex; 
             align-items: center; 
-            padding: 0 20px; 
-            gap: 8px;
+            padding: 0 24px; 
+            gap: 10px;
             transition: all 0.3s ease;
         }
         .dc-chat-button:hover { 
             transform: translateY(-2px); 
-            box-shadow: 0 6px 25px rgba(180, 83, 9, 0.5); 
+            box-shadow: 0 6px 25px rgba(201, 169, 97, 0.5); 
         }
         .dc-chat-button.open { 
             border-radius: 50%; 
-            width: 48px; 
+            width: 56px; 
             padding: 0; 
             justify-content: center; 
         }
-        .dc-chat-button .chat-icon { 
+        .dc-chat-button .dc-chat-icon { 
             width: 24px; 
             height: 24px; 
             fill: white; 
         }
-        .dc-chat-button .chat-label { 
+        .dc-chat-button .dc-chat-label { 
             color: white; 
             font-weight: 600; 
             font-size: 14px;
             font-family: 'Inter', sans-serif;
         }
-        .dc-chat-button.open .chat-label { display: none; }
-        .dc-chat-button .close-icon { 
+        .dc-chat-button.open .dc-chat-label { display: none; }
+        .dc-chat-button .dc-close-icon { 
             display: none; 
             width: 24px; 
             height: 24px; 
             fill: white; 
         }
-        .dc-chat-button.open .chat-icon { display: none; }
-        .dc-chat-button.open .close-icon { display: block; }
+        .dc-chat-button.open .dc-chat-icon { display: none; }
+        .dc-chat-button.open .dc-close-icon { display: block; }
 
         .dc-chat-window { 
             position: fixed; 
-            bottom: 90px; 
+            bottom: 100px; 
             right: 24px; 
             width: 400px; 
-            height: 520px;
-            background: #fff; 
+            height: 550px;
+            background: var(--white); 
             border-radius: 16px; 
             box-shadow: 0 10px 40px rgba(0,0,0,0.2); 
             display: none; 
@@ -1230,27 +1264,28 @@
             overflow: hidden; 
             z-index: 99998;
             font-family: 'Inter', sans-serif;
+            border: 1px solid var(--gray-100);
         }
         .dc-chat-window.open { display: flex; }
 
         .dc-chat-header { 
-            background: linear-gradient(135deg, #78350f, #92400e);
-            padding: 16px; 
+            background: linear-gradient(135deg, var(--navy-deep), var(--navy-corporate));
+            padding: 16px 20px; 
             display: flex; 
             align-items: center; 
             gap: 12px; 
         }
         .dc-chat-avatar { 
-            width: 40px; 
-            height: 40px; 
-            background: rgba(255,255,255,0.2); 
+            width: 44px; 
+            height: 44px; 
+            background: linear-gradient(135deg, var(--gold-primary), var(--gold-dark)); 
             border-radius: 50%; 
             display: flex; 
             align-items: center; 
             justify-content: center; 
             font-weight: 700; 
             color: white; 
-            font-size: 16px;
+            font-size: 14px;
             font-family: 'Playfair Display', serif;
         }
         .dc-chat-header-info { flex: 1; }
@@ -1264,30 +1299,30 @@
         .dc-chat-header-info p { 
             margin: 2px 0 0; 
             font-size: 12px; 
-            opacity: 1;
-            color: #fcd34d;
+            color: var(--gold-light);
         }
         .dc-chat-status { 
             width: 8px; 
             height: 8px; 
             background: #22c55e; 
             border-radius: 50%; 
-            margin-right: 8px;
-            animation: pulse 2s infinite;
+            margin-right: 6px;
+            animation: dcPulse 2s infinite;
         }
-        @keyframes pulse {
+        @keyframes dcPulse {
             0%, 100% { opacity: 1; }
             50% { opacity: 0.5; }
         }
         .dc-chat-close { 
             background: none; 
             border: none; 
-            color: rgba(255,255,255,0.8); 
+            color: rgba(255,255,255,0.7); 
             cursor: pointer; 
             padding: 4px;
             display: flex;
             align-items: center;
             justify-content: center;
+            transition: color 0.2s;
         }
         .dc-chat-close:hover { color: white; }
         .dc-chat-close svg { width: 20px; height: 20px; }
@@ -1296,7 +1331,7 @@
             flex: 1; 
             overflow-y: auto; 
             padding: 16px; 
-            background: #fafafa;
+            background: var(--off-white);
             display: flex;
             flex-direction: column;
             gap: 12px;
@@ -1310,41 +1345,41 @@
             word-wrap: break-word;
         }
         .dc-chat-message a {
-            color: #b45309;
+            color: var(--gold-dark);
             text-decoration: underline;
         }
         .dc-chat-message.user { 
-            background: linear-gradient(135deg, #b45309, #92400e);
+            background: linear-gradient(135deg, var(--gold-primary), var(--gold-dark));
             color: white; 
             align-self: flex-end; 
             border-bottom-right-radius: 4px; 
         }
         .dc-chat-message.user a {
-            color: #fcd34d;
+            color: #fef3c7;
         }
         .dc-chat-message.bot { 
             background: white; 
-            color: #1f2937; 
+            color: var(--gray-900); 
             align-self: flex-start; 
             border-bottom-left-radius: 4px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            box-shadow: var(--shadow-sm);
         }
         .dc-chat-message.typing { 
             background: white; 
             align-self: flex-start;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            box-shadow: var(--shadow-sm);
         }
         .dc-typing-dots { display: flex; gap: 4px; padding: 4px 0; }
         .dc-typing-dots span { 
             width: 8px; 
             height: 8px; 
-            background: #b45309; 
+            background: var(--gold-primary); 
             border-radius: 50%; 
-            animation: typingBounce 1.4s infinite; 
+            animation: dcTypingBounce 1.4s infinite; 
         }
         .dc-typing-dots span:nth-child(2) { animation-delay: 0.2s; }
         .dc-typing-dots span:nth-child(3) { animation-delay: 0.4s; }
-        @keyframes typingBounce {
+        @keyframes dcTypingBounce {
             0%, 60%, 100% { transform: translateY(0); }
             30% { transform: translateY(-4px); }
         }
@@ -1352,24 +1387,29 @@
         .dc-chat-input-container { 
             padding: 12px 16px; 
             background: white; 
-            border-top: 1px solid #e5e7eb; 
+            border-top: 1px solid var(--gray-100); 
             display: flex; 
             gap: 8px; 
         }
         .dc-chat-input { 
             flex: 1; 
-            border: 1px solid #d1d5db; 
+            border: 1px solid var(--gray-100); 
             border-radius: 24px; 
             padding: 10px 16px; 
             font-size: 14px; 
             outline: none;
             font-family: 'Inter', sans-serif;
+            background: var(--off-white);
         }
-        .dc-chat-input:focus { border-color: #b45309; box-shadow: 0 0 0 2px rgba(180, 83, 9, 0.1); }
+        .dc-chat-input:focus { 
+            border-color: var(--gold-primary); 
+            box-shadow: 0 0 0 2px rgba(201, 169, 97, 0.1);
+            background: white;
+        }
         .dc-chat-send { 
             width: 40px; 
             height: 40px; 
-            background: linear-gradient(135deg, #b45309, #92400e);
+            background: linear-gradient(135deg, var(--gold-primary), var(--gold-dark));
             border: none; 
             border-radius: 50%; 
             cursor: pointer; 
@@ -1386,8 +1426,9 @@
             padding: 8px; 
             text-align: center; 
             font-size: 11px; 
-            color: #9ca3af; 
-            background: #f9fafb;
+            color: var(--gray-500); 
+            background: var(--off-white);
+            border-top: 1px solid var(--gray-100);
         }
 
         /* Responsive */
@@ -1396,16 +1437,13 @@
                 right: 12px; 
                 left: 12px;
                 width: auto;
-                bottom: 80px; 
-                height: 75vh; 
+                bottom: 90px; 
+                height: 70vh; 
                 max-height: 500px;
             }
             .dc-chat-button { 
                 bottom: 16px; 
                 right: 16px; 
-            }
-            .dc-chat-button.open { 
-                display: none; 
             }
         }
         
@@ -2258,7 +2296,7 @@
                 </div>
                 <div class="footer-contact-item">
                     <span class="footer-icon">@</span>
-                    <span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c4adaaa2ab84a0b1aba7a5b4adb0a5a8eaa7a8">[email&#160;protected]</a></span>
+                    <span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="51383f373e1135243e3230213825303d7f323d">[email&#160;protected]</a></span>
                 </div>
                 <div class="footer-contact-item">
                     <span class="footer-icon">CL</span>
@@ -2279,13 +2317,13 @@
         </div>
     </footer>
 
-    <!-- Chat Widget Grupo Duocapital -->
+    <!-- Chat Widget - Grupo Duocapital -->
     <button class="dc-chat-button" id="dcChatButton" aria-label="Abrir chat">
-        <svg class="chat-icon" viewBox="0 0 24 24">
+        <svg class="dc-chat-icon" viewBox="0 0 24 24">
             <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" fill="white"/>
         </svg>
-        <span class="chat-label">Chat</span>
-        <svg class="close-icon" viewBox="0 0 24 24">
+        <span class="dc-chat-label">Conversemos</span>
+        <svg class="dc-close-icon" viewBox="0 0 24 24">
             <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" fill="white"/>
         </svg>
     </button>
@@ -2294,8 +2332,8 @@
         <div class="dc-chat-header">
             <div class="dc-chat-avatar">DC</div>
             <div class="dc-chat-header-info">
-                <h4>Asistente Grupo Duocapital</h4>
-                <p>Asesoría y Capacitación</p>
+                <h4>Asistente DuoCapital</h4>
+                <p>Asesoría y Capacitación Empresarial</p>
             </div>
             <div class="dc-chat-status"></div>
             <button class="dc-chat-close" id="dcChatClose" aria-label="Cerrar chat">
@@ -2309,7 +2347,7 @@
         <div class="dc-chat-messages" id="dcChatMessages"></div>
         
         <div class="dc-chat-input-container">
-            <input type="text" class="dc-chat-input" id="dcChatInput" placeholder="Escribe tu mensaje..." autocomplete="off">
+            <input type="text" class="dc-chat-input" id="dcChatInput" placeholder="Escriba su consulta..." autocomplete="off">
             <button class="dc-chat-send" id="dcChatSend" aria-label="Enviar mensaje">
                 <svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
             </button>
@@ -2393,6 +2431,7 @@
             let conversationId = 'conv_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
             let conversationHistory = [];
             let isConversationEnded = false;
+            let inactivityTimer = null;
             
             const chatButton = document.getElementById('dcChatButton');
             const chatWindow = document.getElementById('dcChatWindow');
@@ -2406,31 +2445,45 @@
                 chatWindow.classList.toggle('open');
                 
                 if (chatWindow.classList.contains('open') && conversationHistory.length === 0) {
-                    setTimeout(() => { 
-                        addMessage('bot', '¡Hola! 👋 Soy el asistente virtual de Grupo Duocapital.\n\nPodemos ayudarte con asesoría empresarial (JRO Asesorías) o capacitación (Instituto Tecnipro).\n\n¿En qué puedo orientarte?'); 
-                    }, 500);
+                    setTimeout(function() { 
+                        addMessage('bot', '¡Hola! 👋 Bienvenido a Grupo Duocapital.\n\nPodemos orientarle sobre:\n• Asesoría empresarial (JRO Asesorías)\n• Capacitación corporativa (Instituto Tecnipro)\n\n¿En qué podemos ayudarle?'); 
+                    }, 400);
                 }
                 
                 if (chatWindow.classList.contains('open')) { 
-                    inputField.focus(); 
+                    inputField.focus();
+                    resetInactivityTimer();
                 }
+            }
+            
+            function resetInactivityTimer() {
+                clearTimeout(inactivityTimer);
+                inactivityTimer = setTimeout(function() {
+                    if (conversationHistory.length > 1 && !isConversationEnded) {
+                        endConversation('inactivity');
+                    }
+                }, 300000); // 5 minutos
             }
             
             function addMessage(type, text) {
                 const messageDiv = document.createElement('div');
                 messageDiv.className = 'dc-chat-message ' + type;
                 
+                // Limpiar formato markdown
                 let cleanText = text
                     .replace(/\*\*/g, '')
                     .replace(/__/g, '')
                     .replace(/\*/g, '')
                     .replace(/_/g, '');
                 
+                // Convertir saltos de línea
                 cleanText = cleanText.replace(/\n/g, '<br>');
                 
+                // Convertir URLs en enlaces
                 const urlPattern = /(https?:\/\/[^\s<]+)/g;
                 cleanText = cleanText.replace(urlPattern, '<a href="$1" target="_blank" rel="noopener">$1</a>');
                 
+                // Convertir emails en enlaces
                 const emailPattern = /([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9._-]+)/g;
                 cleanText = cleanText.replace(emailPattern, '<a href="mailto:$1">$1</a>');
                 
@@ -2442,6 +2495,8 @@
                     role: type === 'user' ? 'user' : 'assistant', 
                     content: text 
                 });
+                
+                resetInactivityTimer();
             }
             
             function showTyping() {
@@ -2491,7 +2546,7 @@
                     
                 } catch (error) {
                     hideTyping();
-                    addMessage('bot', 'Lo siento, hubo un problema técnico. Por favor contáctanos directamente:\n\nWhatsApp: https://wa.me/56966895746\nCorreo: info@duocapital.cl');
+                    addMessage('bot', 'Lo siento, hubo un problema técnico. Por favor contáctenos directamente:\n\nWhatsApp: https://wa.me/56966895746\nCorreo: info@duocapital.cl');
                     console.error('Error en chat:', error);
                 }
                 
@@ -2523,9 +2578,10 @@
             // Event Listeners
             chatButton.addEventListener('click', toggleChat);
             sendButton.addEventListener('click', sendMessage);
-            inputField.addEventListener('keypress', (e) => { 
+            inputField.addEventListener('keypress', function(e) { 
                 if (e.key === 'Enter') sendMessage(); 
             });
+            inputField.addEventListener('input', resetInactivityTimer);
             
             closeButton.addEventListener('click', function() {
                 if (conversationHistory.length > 1 && !isConversationEnded) {
@@ -2534,7 +2590,7 @@
                 toggleChat();
             });
             
-            window.addEventListener('beforeunload', () => { 
+            window.addEventListener('beforeunload', function() { 
                 if (conversationHistory.length > 1 && !isConversationEnded) { 
                     endConversation('window_close'); 
                 }
@@ -2572,4 +2628,8 @@
         }, { threshold: 0.5 });
 
         document.querySelectorAll('.metric-number').forEach(el => {
-            metricObserver.obser
+            metricObserver.observe(el);
+        });
+    </script>
+</body>
+</html>
