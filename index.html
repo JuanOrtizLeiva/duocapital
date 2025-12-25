@@ -1877,6 +1877,82 @@
                 bottom: 100px;
             }
         }
+        
+        /* Banner de Correo */
+        .banner-correo {
+            background: #e0f2fe;
+            padding: 16px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            position: relative;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            max-width: 100%;
+            margin-top: 80px; /* Espacio para el header fijo */
+            z-index: 999;
+        }
+        
+        .banner-correo.hidden {
+            display: none;
+        }
+        
+        .banner-icon {
+            font-size: 2rem;
+            flex-shrink: 0;
+        }
+        
+        .banner-content {
+            flex: 1;
+        }
+        
+        .banner-content strong {
+            display: block;
+            font-size: 1.05rem;
+            color: var(--navy-deep);
+            margin-bottom: 4px;
+            font-weight: 600;
+        }
+        
+        .banner-content p {
+            margin: 0;
+            font-size: 0.95rem;
+            color: var(--gray-700);
+            line-height: 1.5;
+        }
+        
+        .banner-close {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--gray-700);
+            cursor: pointer;
+            padding: 4px 8px;
+            line-height: 1;
+            transition: color var(--transition-base);
+            flex-shrink: 0;
+        }
+        
+        .banner-close:hover {
+            color: var(--navy-deep);
+        }
+        
+        @media (max-width: 768px) {
+            .banner-correo {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 12px;
+            }
+            
+            .banner-icon {
+                font-size: 1.5rem;
+            }
+            
+            .banner-close {
+                position: absolute;
+                top: 12px;
+                right: 12px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -1906,6 +1982,16 @@
             </button>
         </nav>
     </header>
+
+    <!-- Banner de Correo -->
+    <div class="banner-correo" id="bannerCorreo">
+        <div class="banner-icon">📧</div>
+        <div class="banner-content">
+            <strong>¿Recibiste un correo de info@duocapital.cl?</strong>
+            <p>¡Perfecto! Significa que estás en contacto con nuestro grupo. Instituto Tecnipro y JRO Asesorías usan un correo centralizado para darte mejor seguimiento y respaldo unificado.</p>
+        </div>
+        <button class="banner-close" id="bannerClose" aria-label="Cerrar">×</button>
+    </div>
 
     <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobileMenu">
@@ -2595,6 +2681,43 @@
             
             // Exponer toggleChat globalmente para el botón del footer
             window.toggleChat = toggleChat;
+        })();
+
+        // Banner de Correo - Manejo de cierre y cookie
+        (function() {
+            const banner = document.getElementById('bannerCorreo');
+            const closeButton = document.getElementById('bannerClose');
+            
+            // Función para establecer cookie
+            function setCookie(name, value, days) {
+                const date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                const expires = "expires=" + date.toUTCString();
+                document.cookie = name + "=" + value + ";" + expires + ";path=/";
+            }
+            
+            // Función para obtener cookie
+            function getCookie(name) {
+                const nameEQ = name + "=";
+                const ca = document.cookie.split(';');
+                for (let i = 0; i < ca.length; i++) {
+                    let c = ca[i];
+                    while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+                    if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+                }
+                return null;
+            }
+            
+            // Verificar si el banner fue cerrado previamente
+            if (getCookie('bannerCorreoClosed') === 'true') {
+                banner.classList.add('hidden');
+            }
+            
+            // Manejar el cierre del banner
+            closeButton.addEventListener('click', function() {
+                banner.classList.add('hidden');
+                setCookie('bannerCorreoClosed', 'true', 30); // Cookie válida por 30 días
+            });
         })();
 
         // Counter animation for metrics and trust numbers
