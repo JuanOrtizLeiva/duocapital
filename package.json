@@ -1,18 +1,5 @@
 {
-  "name": "duocapital-website",
+  "name": "duocapital-web",
   "version": "1.0.0",
-  "description": "DuoCapital - Nexo estratégico entre JRO Asesorías e Instituto de Capacitación Tecnipro",
-  "author": "DuoCapital",
-  "license": "UNLICENSED",
-  "private": true,
-  "scripts": {
-    "test": "echo \"No tests configured\""
-  },
-  "keywords": [
-    "duocapital",
-    "jro-asesorias",
-    "tecnipro",
-    "consultoria",
-    "capacitacion"
-  ]
+  "description": "Sitio web Grupo Duocapital con chat IA"
 }
