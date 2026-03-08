@@ -13,7 +13,7 @@
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 80' fill='none'><rect width='120' height='80' rx='16' fill='%23090c12'/><defs><linearGradient id='g' x1='0' y1='38' x2='120' y2='38'><stop offset='0%25' stop-color='%234DA8DA'/><stop offset='55%25' stop-color='%232ECC71'/><stop offset='100%25' stop-color='%23E8B84B'/></linearGradient></defs><path d='M22 38C22 26 30 20 38 28C43 33 49 38 56 38C63 38 69 32 76 25C90 10 112 18 112 38C112 60 88 68 74 52C67 44 61 39 54 39C47 39 40 46 34 51C26 58 20 52 22 38Z' stroke='url(%23g)' stroke-width='4.5' stroke-linecap='round' stroke-linejoin='round' fill='none'/></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -24,7 +24,7 @@
             --dark-border: #191926;
             --dark-text: #ebebf2;
             --dark-text-sec: #8e8ea8;
-            --dark-text-dim: #45455a;
+            --dark-text-dim: #6a6a80;
             --accent-blue: #4DA8DA;
             --accent-green: #2ECC71;
             --accent-gold: #E8B84B;
@@ -37,6 +37,15 @@
         }
 
         html { scroll-behavior: smooth; font-size: 16px; }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
 
         body {
             font-family: 'Montserrat', sans-serif;
@@ -334,7 +343,7 @@
             -webkit-background-clip: text; -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-        .trust-label { font-size: 0.7rem; color: var(--dark-text-dim); margin-top: 0.4rem; letter-spacing: 1.5px; font-weight: 600; }
+        .trust-label { font-size: 0.75rem; color: var(--dark-text-sec); margin-top: 0; letter-spacing: 1.5px; font-weight: 600; }
 
         @media (max-width: 600px) {
             .trust-bar { grid-template-columns: 1fr; max-width: 240px; }
@@ -546,7 +555,7 @@
         .kpi-val--blue { color: var(--accent-blue); }
         .kpi-val--green { color: var(--accent-green); }
         .kpi-val--gold { color: var(--accent-gold); }
-        .kpi-lbl { display: block; font-size: 0.62rem; color: #7a7f96; margin-top: 0.35rem; letter-spacing: 1.5px; font-weight: 600; }
+        .kpi-lbl { display: block; font-size: 0.75rem; color: #7a7f96; margin-top: 0.35rem; letter-spacing: 1.5px; font-weight: 600; }
 
         .courses-mini { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.5rem; }
         .course-tag {
@@ -632,7 +641,7 @@
             -webkit-background-clip: text; -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-        .cred-label { font-size: 0.72rem; color: var(--dark-text-dim); margin-top: 0.5rem; letter-spacing: 2px; font-weight: 600; }
+        .cred-label { font-size: 0.75rem; color: var(--dark-text-sec); margin-top: 0.5rem; letter-spacing: 2px; font-weight: 600; }
 
         .cert-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.8rem; }
         .cert-badge {
@@ -942,16 +951,13 @@
             </div>
             <div class="trust-bar">
                 <div class="trust-item">
-                    <div class="trust-number" data-count="15" data-suffix="+">0</div>
-                    <div class="trust-label">AÑOS EXPERIENCIA</div>
+                    <div class="trust-label">CAPACITACIÓN SENCE</div>
                 </div>
                 <div class="trust-item">
-                    <div class="trust-number" data-count="50" data-suffix="+">0</div>
-                    <div class="trust-label">ORGANIZACIONES</div>
+                    <div class="trust-label">CONSULTORÍA EN DATOS E IA</div>
                 </div>
                 <div class="trust-item">
-                    <div class="trust-number" data-count="97" data-suffix="%">0</div>
-                    <div class="trust-label">SATISFACCIÓN</div>
+                    <div class="trust-label">TECNOLOGÍA MUNICIPAL</div>
                 </div>
             </div>
         </div>
@@ -1201,11 +1207,12 @@
                 <div class="contact-form reveal reveal-d2">
                     <div class="contact-form-inner">
                         <h3>Envíenos un mensaje</h3>
-                        <form id="contactForm" onsubmit="return handleContactForm(event)">
-                            <div class="form-group"><label for="cf-name">Nombre</label><input type="text" id="cf-name" required placeholder="Su nombre completo"></div>
-                            <div class="form-group"><label for="cf-email">Correo</label><input type="email" id="cf-email" required placeholder="correo@empresa.cl"></div>
-                            <div class="form-group"><label for="cf-unit">Área de interés</label><select id="cf-unit"><option value="">Seleccione...</option><option value="tecnipro">Capacitación (Tecnipro)</option><option value="jro">Consultoría (JRO Asesorías)</option><option value="alerta">Alerta Municipal</option><option value="general">Consulta general</option></select></div>
-                            <div class="form-group"><label for="cf-message">Mensaje</label><textarea id="cf-message" placeholder="Cuéntenos brevemente qué necesita"></textarea></div>
+                        <form id="contactForm" name="contacto-duocapital" method="POST" data-netlify="true">
+                            <input type="hidden" name="form-name" value="contacto-duocapital">
+                            <div class="form-group"><label for="cf-name">Nombre</label><input type="text" id="cf-name" name="nombre" required placeholder="Su nombre completo"></div>
+                            <div class="form-group"><label for="cf-email">Correo</label><input type="email" id="cf-email" name="email" required placeholder="correo@empresa.cl"></div>
+                            <div class="form-group"><label for="cf-unit">Área de interés</label><select id="cf-unit" name="area"><option value="">Seleccione...</option><option value="tecnipro">Capacitación (Tecnipro)</option><option value="jro">Consultoría (JRO Asesorías)</option><option value="alerta">Alerta Municipal</option><option value="general">Consulta general</option></select></div>
+                            <div class="form-group"><label for="cf-message">Mensaje</label><textarea id="cf-message" name="mensaje" placeholder="Cuéntenos brevemente qué necesita"></textarea></div>
                             <button type="submit" class="form-submit">Enviar mensaje</button>
                         </form>
                     </div>
@@ -1291,12 +1298,33 @@
         var cObs = new IntersectionObserver(function(entries) { entries.forEach(function(e) { if (e.isIntersecting && !e.target._c) { e.target._c = true; e.target.querySelectorAll('[data-count]').forEach(animateCounter); } }); }, { threshold: 0.3 });
         document.querySelectorAll('.trust-bar, .cred-grid').forEach(function(el) { cObs.observe(el); });
 
-        window.handleContactForm = function(e) {
-            e.preventDefault(); var f = e.target;
-            var s = encodeURIComponent('Contacto web - ' + f.querySelector('#cf-name').value);
-            var b = encodeURIComponent('Nombre: ' + f.querySelector('#cf-name').value + '\nEmail: ' + f.querySelector('#cf-email').value + '\nÁrea: ' + f.querySelector('#cf-unit').value + '\n\nMensaje:\n' + f.querySelector('#cf-message').value);
-            window.location.href = 'mailto:info@duocapital.cl?subject=' + s + '&body=' + b; return false;
-        };
+        (function() {
+            var form = document.getElementById('contactForm');
+            if (!form) return;
+            form.addEventListener('submit', async function(e) {
+                e.preventDefault();
+                var btn = form.querySelector('.form-submit');
+                var origText = btn.textContent;
+                btn.textContent = 'Enviando...';
+                btn.disabled = true;
+                btn.style.opacity = '0.7';
+                try {
+                    var resp = await fetch('/', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                        body: new URLSearchParams(new FormData(form)).toString()
+                    });
+                    if (resp.ok) {
+                        form.innerHTML = '<div style="text-align:center;padding:2rem"><div style="width:48px;height:48px;background:var(--accent-green);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;color:#fff;font-size:1.5rem">✓</div><h3 style="color:var(--accent-green);margin-bottom:0.5rem">Mensaje enviado</h3><p style="color:#5a6078">Gracias por contactarnos. Le responderemos en menos de 24 horas.</p></div>';
+                    } else { throw new Error('Error'); }
+                } catch(err) {
+                    btn.textContent = origText;
+                    btn.disabled = false;
+                    btn.style.opacity = '1';
+                    alert('Hubo un error. Intente nuevamente o escríbanos a info@duocapital.cl');
+                }
+            });
+        })();
 
         // CHAT
         var API = '/.netlify/functions/chat', cId = 'conv_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9), hist = [], ended = false, timer = null;
