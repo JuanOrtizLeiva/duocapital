@@ -10,7 +10,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://duocapital.cl">
     <meta property="og:locale" content="es_CL">
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%230B2545'/><path d='M8 16 L16 8 L24 16 L16 24Z' fill='none' stroke='%230EA5E9' stroke-width='2.5'/><circle cx='16' cy='16' r='3' fill='%230EA5E9'/></svg>">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23091E3A'/><path d='M6 16 C6 12 10 8 14 12 C16 14 16 14 18 12 C22 8 26 12 26 16 C26 20 22 24 18 20 C16 18 16 18 14 20 C10 24 6 20 6 16Z' fill='none' stroke='%234DA8DA' stroke-width='2' stroke-linecap='round'/></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
@@ -21,24 +21,33 @@
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
         :root {
-            --primary: #0B2545;
-            --primary-mid: #13315C;
-            --primary-light: #1B3A6B;
-            --accent: #0EA5E9;
-            --accent-hover: #0284C7;
-            --accent-glow: rgba(14,165,233,0.15);
-            --green: #10B981;
-            --green-hover: #059669;
-            --sky: #38BDF8;
-            --neutral-50: #F8FAFC;
-            --neutral-100: #F1F5F9;
-            --neutral-200: #E2E8F0;
-            --neutral-700: #334155;
-            --neutral-800: #1E293B;
-            --neutral-900: #0F172A;
+            /* Psicología del color:
+               - Primary (#091E3A): Azul profundo → autoridad, confianza institucional, seriedad
+               - Accent (#4DA8DA): Azul medio cálido → accesibilidad, innovación, cercanía tecnológica
+               - Green (#2ECC71): Verde vivo → crecimiento, prosperidad, resultados positivos
+               - Warm (#E8B84B): Dorado cálido → excelencia, valor premium, aspiración
+               Juntos transmiten: "Profesionalismo accesible con aspiración de excelencia"
+            */
+            --primary: #091E3A;
+            --primary-mid: #0F2D52;
+            --primary-light: #163D6B;
+            --accent: #4DA8DA;
+            --accent-hover: #3A8FBE;
+            --accent-glow: rgba(77,168,218,0.15);
+            --green: #2ECC71;
+            --green-hover: #27AE60;
+            --warm: #E8B84B;
+            --warm-hover: #D4A33A;
+            --sky: #5BBCE6;
+            --neutral-50: #F7F9FC;
+            --neutral-100: #EEF2F7;
+            --neutral-200: #DDE3ED;
+            --neutral-700: #3D4F65;
+            --neutral-800: #1C2A3A;
+            --neutral-900: #0D1B2A;
             --white: #FFFFFF;
-            --text: #0F172A;
-            --text-muted: #64748B;
+            --text: #0D1B2A;
+            --text-muted: #5A6B7F;
             --radius: 16px;
             --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
@@ -77,7 +86,7 @@
             text-transform: uppercase; padding: 0.45rem 1.1rem;
             border-radius: 30px; margin-bottom: 1.25rem;
             background: var(--accent-glow); color: var(--accent);
-            border: 1px solid rgba(14,165,233,0.15);
+            border: 1px solid rgba(77,168,218,0.15);
         }
         .section-badge::before {
             content: ''; width: 6px; height: 6px; border-radius: 50%;
@@ -106,7 +115,7 @@
         header.scrolled {
             background: rgba(255,255,255,0.95);
             border-bottom-color: var(--neutral-200);
-            box-shadow: 0 1px 30px rgba(11,37,69,0.06);
+            box-shadow: 0 1px 30px rgba(9,30,58,0.06);
         }
 
         .nav-inner {
@@ -115,22 +124,35 @@
             align-items: center; height: 72px;
         }
 
-        /* LOGO — Diamante animado */
-        .logo { display: flex; align-items: center; gap: 0.85rem; }
+        /* LOGO — Infinity artístico + tipografía futurista */
+        .logo { display: flex; align-items: center; gap: 0.7rem; }
         .logo-symbol {
-            width: 42px; height: 42px; position: relative;
+            width: 48px; height: 28px; position: relative;
             display: flex; align-items: center; justify-content: center;
         }
-        .logo-symbol svg { width: 42px; height: 42px; }
-        .logo-diamond {
-            transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+        .logo-symbol svg {
+            width: 48px; height: 28px;
+            transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
         }
-        .logo:hover .logo-diamond { transform: rotate(45deg) scale(1.1); }
+        .logo:hover .logo-symbol svg { transform: scale(1.08); }
+        .logo-infinity-path {
+            stroke-dasharray: 200;
+            stroke-dashoffset: 200;
+            animation: draw-infinity 1.5s ease forwards 0.3s;
+        }
+        @keyframes draw-infinity {
+            to { stroke-dashoffset: 0; }
+        }
         .logo-text {
             font-family: 'Montserrat', sans-serif;
-            font-size: 1.3rem; font-weight: 900;
-            color: var(--primary); letter-spacing: -0.03em;
+            font-size: 1.25rem; font-weight: 900;
+            letter-spacing: 0.12em; text-transform: uppercase;
         }
+        /* Dark background version */
+        .logo--dark .logo-text { color: var(--white); }
+        .logo--dark .logo-text span { color: var(--accent); }
+        /* Light background (default) */
+        .logo-text { color: var(--primary); }
         .logo-text span { color: var(--accent); }
 
         .nav-links {
@@ -153,11 +175,11 @@
             padding: 0.55rem 1.4rem; border-radius: 10px;
             font-weight: 700; font-size: 0.88rem;
             transition: all var(--transition);
-            box-shadow: 0 2px 10px rgba(11,37,69,0.15);
+            box-shadow: 0 2px 10px rgba(9,30,58,0.15);
         }
         .nav-cta:hover {
             background: var(--accent);
-            box-shadow: 0 4px 20px rgba(14,165,233,0.3);
+            box-shadow: 0 4px 20px rgba(77,168,218,0.3);
             transform: translateY(-1px);
         }
 
@@ -212,9 +234,9 @@
         .hero-bg {
             position: absolute; inset: 0; z-index: 0;
             background:
-                radial-gradient(ellipse 80% 60% at 70% 20%, rgba(14,165,233,0.2) 0%, transparent 50%),
-                radial-gradient(ellipse 60% 80% at 20% 80%, rgba(16,185,129,0.12) 0%, transparent 50%),
-                radial-gradient(ellipse 50% 50% at 50% 50%, rgba(56,189,248,0.06) 0%, transparent 50%),
+                radial-gradient(ellipse 80% 60% at 70% 20%, rgba(77,168,218,0.2) 0%, transparent 50%),
+                radial-gradient(ellipse 60% 80% at 20% 80%, rgba(46,204,113,0.12) 0%, transparent 50%),
+                radial-gradient(ellipse 50% 50% at 50% 50%, rgba(91,188,230,0.06) 0%, transparent 50%),
                 linear-gradient(160deg, #07192E 0%, var(--primary) 30%, var(--primary-mid) 70%, #0D2E55 100%);
             animation: meshMove 20s ease-in-out infinite alternate;
         }
@@ -229,13 +251,13 @@
             overflow: hidden;
         }
         .hero-shape {
-            position: absolute; border: 1px solid rgba(14,165,233,0.12);
+            position: absolute; border: 1px solid rgba(77,168,218,0.12);
             border-radius: 50%; animation: float-shape 25s ease-in-out infinite;
         }
         .hero-shape:nth-child(1) { width: 400px; height: 400px; top: -10%; right: -5%; animation-duration: 22s; }
-        .hero-shape:nth-child(2) { width: 250px; height: 250px; bottom: 10%; left: -3%; animation-duration: 28s; animation-delay: -5s; border-color: rgba(16,185,129,0.1); }
+        .hero-shape:nth-child(2) { width: 250px; height: 250px; bottom: 10%; left: -3%; animation-duration: 28s; animation-delay: -5s; border-color: rgba(46,204,113,0.1); }
         .hero-shape:nth-child(3) { width: 150px; height: 150px; top: 40%; right: 20%; animation-duration: 18s; animation-delay: -10s; }
-        .hero-shape:nth-child(4) { width: 80px; height: 80px; top: 20%; left: 15%; animation-duration: 15s; animation-delay: -3s; border-color: rgba(56,189,248,0.15); }
+        .hero-shape:nth-child(4) { width: 80px; height: 80px; top: 20%; left: 15%; animation-duration: 15s; animation-delay: -3s; border-color: rgba(91,188,230,0.15); }
 
         @keyframes float-shape {
             0%, 100% { transform: translateY(0) rotate(0deg); opacity: 0.5; }
@@ -247,7 +269,7 @@
         /* Scan line effect */
         .hero::after {
             content: ''; position: absolute; top: 0; left: 0; right: 0;
-            height: 1px; background: linear-gradient(90deg, transparent, rgba(14,165,233,0.3), transparent);
+            height: 1px; background: linear-gradient(90deg, transparent, rgba(77,168,218,0.3), transparent);
             animation: scan 6s ease-in-out infinite; z-index: 2;
         }
         @keyframes scan {
@@ -279,7 +301,7 @@
         }
 
         .hero-gradient-text {
-            background: linear-gradient(135deg, var(--white) 0%, var(--accent) 50%, var(--sky) 100%);
+            background: linear-gradient(135deg, var(--white) 0%, var(--accent) 40%, var(--warm) 100%);
             -webkit-background-clip: text; -webkit-text-fill-color: transparent;
             background-clip: text;
         }
@@ -305,11 +327,11 @@
 
         .btn-hero--primary {
             background: var(--accent); color: var(--white);
-            box-shadow: 0 4px 20px rgba(14,165,233,0.35);
+            box-shadow: 0 4px 20px rgba(77,168,218,0.35);
         }
         .btn-hero--primary:hover {
             background: var(--accent-hover);
-            box-shadow: 0 8px 30px rgba(14,165,233,0.5);
+            box-shadow: 0 8px 30px rgba(77,168,218,0.5);
             transform: translateY(-2px);
         }
         .btn-hero--primary:hover svg { transform: translateY(2px); }
@@ -349,8 +371,8 @@
             transition: all var(--transition);
         }
         .trust-item:hover {
-            background: rgba(14,165,233,0.08);
-            border-color: rgba(14,165,233,0.2);
+            background: rgba(77,168,218,0.08);
+            border-color: rgba(77,168,218,0.2);
             transform: translateY(-3px);
         }
         .trust-number {
@@ -411,11 +433,11 @@
         }
         .unit-card:hover::after { transform: scaleX(1); }
 
-        .unit-card--tecnipro::before { background: radial-gradient(circle, rgba(14,165,233,0.06), transparent 60%); }
+        .unit-card--tecnipro::before { background: radial-gradient(circle, rgba(77,168,218,0.06), transparent 60%); }
         .unit-card--tecnipro::after { background: linear-gradient(90deg, var(--accent), var(--sky)); }
-        .unit-card--jro::before { background: radial-gradient(circle, rgba(16,185,129,0.06), transparent 60%); }
-        .unit-card--jro::after { background: linear-gradient(90deg, var(--green), #34D399); }
-        .unit-card--alerta::before { background: radial-gradient(circle, rgba(56,189,248,0.06), transparent 60%); }
+        .unit-card--jro::before { background: radial-gradient(circle, rgba(46,204,113,0.06), transparent 60%); }
+        .unit-card--jro::after { background: linear-gradient(90deg, var(--green), #5EDBA0); }
+        .unit-card--alerta::before { background: radial-gradient(circle, rgba(91,188,230,0.06), transparent 60%); }
         .unit-card--alerta::after { background: linear-gradient(90deg, var(--sky), var(--accent)); }
 
         .unit-icon {
@@ -427,9 +449,9 @@
         .unit-card:hover .unit-icon { transform: scale(1.1) rotate(-3deg); }
         .unit-icon svg { width: 28px; height: 28px; position: relative; z-index: 1; }
 
-        .unit-card--tecnipro .unit-icon { background: rgba(14,165,233,0.1); color: var(--accent); }
-        .unit-card--jro .unit-icon { background: rgba(16,185,129,0.1); color: var(--green); }
-        .unit-card--alerta .unit-icon { background: rgba(56,189,248,0.1); color: var(--sky); }
+        .unit-card--tecnipro .unit-icon { background: rgba(77,168,218,0.1); color: var(--accent); }
+        .unit-card--jro .unit-icon { background: rgba(46,204,113,0.1); color: var(--green); }
+        .unit-card--alerta .unit-icon { background: rgba(91,188,230,0.1); color: var(--sky); }
 
         .unit-tag {
             font-size: 0.7rem; font-weight: 800; text-transform: uppercase;
@@ -437,7 +459,7 @@
         }
         .unit-card--tecnipro .unit-tag { color: var(--accent); }
         .unit-card--jro .unit-tag { color: var(--green); }
-        .unit-card--alerta .unit-tag { color: #0284C7; }
+        .unit-card--alerta .unit-tag { color: #3A8FBE; }
 
         .unit-card h3 { font-size: 1.3rem; margin-bottom: 0.4rem; }
         .unit-tagline {
@@ -458,12 +480,12 @@
         .unit-btn svg { width: 16px; height: 16px; transition: transform var(--transition); }
         .unit-btn:hover svg { transform: translateX(4px); }
 
-        .unit-card--tecnipro .unit-btn { background: rgba(14,165,233,0.08); color: var(--accent); }
-        .unit-card--tecnipro .unit-btn:hover { background: var(--accent); color: var(--white); box-shadow: 0 4px 15px rgba(14,165,233,0.3); }
-        .unit-card--jro .unit-btn { background: rgba(16,185,129,0.08); color: var(--green); }
-        .unit-card--jro .unit-btn:hover { background: var(--green); color: var(--white); box-shadow: 0 4px 15px rgba(16,185,129,0.3); }
-        .unit-card--alerta .unit-btn { background: rgba(56,189,248,0.08); color: #0284C7; }
-        .unit-card--alerta .unit-btn:hover { background: var(--accent); color: var(--white); box-shadow: 0 4px 15px rgba(14,165,233,0.3); }
+        .unit-card--tecnipro .unit-btn { background: rgba(77,168,218,0.08); color: var(--accent); }
+        .unit-card--tecnipro .unit-btn:hover { background: var(--accent); color: var(--white); box-shadow: 0 4px 15px rgba(77,168,218,0.3); }
+        .unit-card--jro .unit-btn { background: rgba(46,204,113,0.08); color: var(--green); }
+        .unit-card--jro .unit-btn:hover { background: var(--green); color: var(--white); box-shadow: 0 4px 15px rgba(46,204,113,0.3); }
+        .unit-card--alerta .unit-btn { background: rgba(91,188,230,0.08); color: #3A8FBE; }
+        .unit-card--alerta .unit-btn:hover { background: var(--accent); color: var(--white); box-shadow: 0 4px 15px rgba(77,168,218,0.3); }
 
         /* =============================================
            DETAIL SECTIONS
@@ -499,9 +521,9 @@
         }
         .detail-list li:hover::before { transform: translateY(-50%) scale(1.3); }
 
-        .detail--tecnipro .detail-list li::before { background: var(--accent); box-shadow: 0 0 0 3px rgba(14,165,233,0.15); }
-        .detail--jro .detail-list li::before { background: var(--green); box-shadow: 0 0 0 3px rgba(16,185,129,0.15); }
-        .detail--alerta .detail-list li::before { background: var(--sky); box-shadow: 0 0 0 3px rgba(56,189,248,0.15); }
+        .detail--tecnipro .detail-list li::before { background: var(--accent); box-shadow: 0 0 0 3px rgba(77,168,218,0.15); }
+        .detail--jro .detail-list li::before { background: var(--green); box-shadow: 0 0 0 3px rgba(46,204,113,0.15); }
+        .detail--alerta .detail-list li::before { background: var(--sky); box-shadow: 0 0 0 3px rgba(91,188,230,0.15); }
 
         .detail-cta {
             display: inline-flex; align-items: center; gap: 0.5rem;
@@ -516,11 +538,11 @@
         .detail-cta svg { width: 16px; height: 16px; }
 
         .detail--tecnipro .detail-cta { background: var(--accent); }
-        .detail--tecnipro .detail-cta:hover { background: var(--accent-hover); box-shadow: 0 8px 25px rgba(14,165,233,0.35); }
+        .detail--tecnipro .detail-cta:hover { background: var(--accent-hover); box-shadow: 0 8px 25px rgba(77,168,218,0.35); }
         .detail--jro .detail-cta { background: var(--green); }
-        .detail--jro .detail-cta:hover { background: var(--green-hover); box-shadow: 0 8px 25px rgba(16,185,129,0.35); }
+        .detail--jro .detail-cta:hover { background: var(--green-hover); box-shadow: 0 8px 25px rgba(46,204,113,0.35); }
         .detail--alerta .detail-cta { background: var(--accent); }
-        .detail--alerta .detail-cta:hover { background: var(--accent-hover); box-shadow: 0 8px 25px rgba(14,165,233,0.35); }
+        .detail--alerta .detail-cta:hover { background: var(--accent-hover); box-shadow: 0 8px 25px rgba(77,168,218,0.35); }
 
         /* Visual panels — Premium */
         .detail-visual {
@@ -606,7 +628,7 @@
             text-align: center; border: 1px solid var(--neutral-200);
             transition: all var(--transition);
         }
-        .course-tag:hover { border-color: var(--accent); color: var(--accent); background: rgba(14,165,233,0.04); }
+        .course-tag:hover { border-color: var(--accent); color: var(--accent); background: rgba(77,168,218,0.04); }
 
         /* Alert features */
         .alert-features-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.6rem; }
@@ -622,7 +644,7 @@
             width: 30px; height: 30px; border-radius: 8px;
             display: flex; align-items: center; justify-content: center;
             font-size: 0.95rem; flex-shrink: 0;
-            background: rgba(14,165,233,0.08);
+            background: rgba(77,168,218,0.08);
         }
 
         /* =============================================
@@ -656,7 +678,7 @@
         .credentials::before {
             content: ''; position: absolute; top: -50%; right: -25%;
             width: 60%; height: 200%;
-            background: radial-gradient(circle, rgba(14,165,233,0.07) 0%, transparent 50%);
+            background: radial-gradient(circle, rgba(77,168,218,0.07) 0%, transparent 50%);
             pointer-events: none;
         }
 
@@ -675,11 +697,11 @@
         }
         .cred-item::before {
             content: ''; position: absolute; inset: 0;
-            background: linear-gradient(135deg, rgba(14,165,233,0.05), transparent);
+            background: linear-gradient(135deg, rgba(77,168,218,0.05), transparent);
             opacity: 0; transition: opacity var(--transition);
         }
         .cred-item:hover {
-            border-color: rgba(14,165,233,0.2);
+            border-color: rgba(77,168,218,0.2);
             transform: translateY(-4px);
         }
         .cred-item:hover::before { opacity: 1; }
@@ -710,7 +732,7 @@
         }
         .cert-badge:hover {
             background: rgba(255,255,255,0.08);
-            border-color: rgba(14,165,233,0.3);
+            border-color: rgba(77,168,218,0.3);
             color: var(--white);
         }
         .cert-icon {
@@ -743,7 +765,7 @@
         .client-chip:hover {
             border-color: var(--accent); color: var(--accent);
             transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(14,165,233,0.12);
+            box-shadow: 0 6px 20px rgba(77,168,218,0.12);
         }
 
         /* =============================================
@@ -798,7 +820,7 @@
         }
         .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
             border-color: var(--accent);
-            box-shadow: 0 0 0 4px rgba(14,165,233,0.08);
+            box-shadow: 0 0 0 4px rgba(77,168,218,0.08);
             background: var(--white);
         }
         .form-group textarea { resize: vertical; min-height: 90px; }
@@ -813,7 +835,7 @@
         }
         .form-submit:hover {
             background: var(--accent);
-            box-shadow: 0 6px 20px rgba(14,165,233,0.25);
+            box-shadow: 0 6px 20px rgba(77,168,218,0.25);
             transform: translateY(-1px);
         }
 
@@ -857,13 +879,13 @@
             position: fixed; bottom: 24px; right: 24px; height: 54px;
             background: linear-gradient(135deg, var(--primary), var(--primary-mid));
             border: none; border-radius: 27px; cursor: pointer;
-            box-shadow: 0 4px 25px rgba(11,37,69,0.35);
+            box-shadow: 0 4px 25px rgba(9,30,58,0.35);
             z-index: 999; display: flex; align-items: center;
             padding: 0 22px; gap: 8px; transition: all var(--transition);
         }
         .dc-chat-button:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 30px rgba(14,165,233,0.3);
+            box-shadow: 0 8px 30px rgba(77,168,218,0.3);
             background: linear-gradient(135deg, var(--primary-mid), var(--accent));
         }
         .dc-chat-button.open { display: none; }
@@ -1022,24 +1044,18 @@
         <div class="nav-inner">
             <a href="#" class="logo">
                 <div class="logo-symbol">
-                    <svg viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <!-- Outer diamond -->
-                        <path class="logo-diamond" d="M21 4 L38 21 L21 38 L4 21Z" stroke="#0B2545" stroke-width="2.5" fill="none" opacity="0.3"/>
-                        <!-- Inner diamond with gradient -->
-                        <path d="M21 10 L32 21 L21 32 L10 21Z" fill="url(#logo-grad)" opacity="0.9"/>
-                        <!-- Center dot -->
-                        <circle cx="21" cy="21" r="3.5" fill="#0B2545"/>
-                        <!-- Accent lines -->
-                        <line x1="21" y1="4" x2="21" y2="14" stroke="#0EA5E9" stroke-width="1.5" opacity="0.6"/>
-                        <line x1="38" y1="21" x2="28" y2="21" stroke="#0EA5E9" stroke-width="1.5" opacity="0.6"/>
-                        <line x1="21" y1="38" x2="21" y2="28" stroke="#10B981" stroke-width="1.5" opacity="0.6"/>
-                        <line x1="4" y1="21" x2="14" y2="21" stroke="#38BDF8" stroke-width="1.5" opacity="0.6"/>
+                    <svg viewBox="0 0 120 60" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <defs>
-                            <linearGradient id="logo-grad" x1="10" y1="10" x2="32" y2="32">
-                                <stop offset="0%" stop-color="#0EA5E9"/>
-                                <stop offset="100%" stop-color="#0B2545"/>
+                            <linearGradient id="inf-grad" x1="0" y1="30" x2="120" y2="30">
+                                <stop offset="0%" stop-color="#4DA8DA"/>
+                                <stop offset="45%" stop-color="#2ECC71"/>
+                                <stop offset="100%" stop-color="#E8B84B"/>
                             </linearGradient>
                         </defs>
+                        <!-- Artistic infinity — hand-drawn feel with varying thickness -->
+                        <path class="logo-infinity-path" d="M15 30 C15 18 25 10 35 18 C42 23 48 30 60 30 C72 30 78 23 85 18 C95 10 105 18 105 30 C105 42 95 50 85 42 C78 37 72 30 60 30 C48 30 42 37 35 42 C25 50 15 42 15 30Z" stroke="url(#inf-grad)" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+                        <!-- Subtle inner glow line -->
+                        <path d="M22 30 C22 22 29 17 36 22 C42 26 50 30 60 30 C70 30 78 26 84 22 C91 17 98 22 98 30 C98 38 91 43 84 38 C78 34 70 30 60 30 C50 30 42 34 36 38 C29 43 22 38 22 30Z" stroke="url(#inf-grad)" stroke-width="1" stroke-linecap="round" fill="none" opacity="0.3"/>
                     </svg>
                 </div>
                 <span class="logo-text">Duo<span>Capital</span></span>
@@ -1063,7 +1079,7 @@
         <div class="mobile-menu-header">
             <div class="logo">
                 <div class="logo-symbol">
-                    <svg viewBox="0 0 42 42" fill="none"><path d="M21 10 L32 21 L21 32 L10 21Z" fill="url(#logo-grad2)"/><circle cx="21" cy="21" r="3.5" fill="#0B2545"/><defs><linearGradient id="logo-grad2" x1="10" y1="10" x2="32" y2="32"><stop offset="0%" stop-color="#0EA5E9"/><stop offset="100%" stop-color="#0B2545"/></linearGradient></defs></svg>
+                    <svg viewBox="0 0 120 60" fill="none"><defs><linearGradient id="inf-grad-m" x1="0" y1="30" x2="120" y2="30"><stop offset="0%" stop-color="#4DA8DA"/><stop offset="45%" stop-color="#2ECC71"/><stop offset="100%" stop-color="#E8B84B"/></linearGradient></defs><path d="M15 30 C15 18 25 10 35 18 C42 23 48 30 60 30 C72 30 78 23 85 18 C95 10 105 18 105 30 C105 42 95 50 85 42 C78 37 72 30 60 30 C48 30 42 37 35 42 C25 50 15 42 15 30Z" stroke="url(#inf-grad-m)" stroke-width="3.5" stroke-linecap="round" fill="none"/></svg>
                 </div>
                 <span class="logo-text">Duo<span>Capital</span></span>
             </div>
@@ -1091,8 +1107,9 @@
             <div class="hero-eyebrow">Capacitación &middot; Consultoría &middot; Tecnología</div>
             <h1>Soluciones profesionales para <span class="hero-gradient-text">organizaciones que quieren avanzar</span></h1>
             <p class="hero-desc">
-                Tres unidades especializadas bajo un mismo respaldo: formación corporativa con SENCE,
-                consultoría en datos e inteligencia artificial, y plataformas tecnológicas para municipios.
+                Donde la capacitación SENCE acelera equipos, la inteligencia de datos transforma decisiones
+                y la tecnología conecta municipios con sus comunidades. Tres fuerzas, un propósito:
+                que su organización no solo funcione, sino que lidere.
             </p>
             <div class="hero-actions">
                 <a href="#unidades" class="btn-hero btn-hero--primary">
@@ -1195,7 +1212,7 @@
                     </a>
                 </div>
                 <div class="detail-visual reveal-scale" data-parallax="0.03">
-                    <div class="visual-header" style="background: linear-gradient(135deg, #0EA5E9, #0284C7);">
+                    <div class="visual-header" style="background: linear-gradient(135deg, #4DA8DA, #3A8FBE);">
                         <h4>Programa Capacitación 2026</h4>
                         <span class="visual-live">SENCE 100%</span>
                     </div>
@@ -1224,7 +1241,7 @@
         <div class="container">
             <div class="detail-grid reverse">
                 <div class="detail-content reveal">
-                    <div class="section-badge" style="background: rgba(16,185,129,0.1); color: var(--green); border-color: rgba(16,185,129,0.15);">JRO Asesorías</div>
+                    <div class="section-badge" style="background: rgba(46,204,113,0.1); color: var(--green); border-color: rgba(46,204,113,0.15);">JRO Asesorías</div>
                     <h2>Consultoría en datos, IA y transformación digital</h2>
                     <p>Convertimos datos en decisiones estratégicas. Dashboards personalizados, automatización de procesos y soluciones de inteligencia artificial aplicadas a su negocio.</p>
                     <ul class="detail-list">
@@ -1240,7 +1257,7 @@
                     </a>
                 </div>
                 <div class="detail-visual reveal-scale" data-parallax="0.03">
-                    <div class="visual-header" style="background: linear-gradient(135deg, #10B981, #059669);">
+                    <div class="visual-header" style="background: linear-gradient(135deg, #2ECC71, #27AE60);">
                         <h4>Panel de Control Ejecutivo</h4>
                         <span class="visual-live">TIEMPO REAL</span>
                     </div>
@@ -1251,13 +1268,13 @@
                             <div class="kpi"><span class="kpi-val">3.2x</span><span class="kpi-lbl">Velocidad</span></div>
                         </div>
                         <div class="chart-bars">
-                            <div class="bar" style="height:55%; background: linear-gradient(to top, #10B981, #34D399);"></div>
-                            <div class="bar" style="height:78%; background: linear-gradient(to top, #10B981, #34D399);"></div>
-                            <div class="bar" style="height:42%; background: linear-gradient(to top, #10B981, #34D399);"></div>
-                            <div class="bar" style="height:91%; background: linear-gradient(to top, #10B981, #34D399);"></div>
-                            <div class="bar" style="height:65%; background: linear-gradient(to top, #10B981, #34D399);"></div>
-                            <div class="bar" style="height:83%; background: linear-gradient(to top, #10B981, #34D399);"></div>
-                            <div class="bar" style="height:72%; background: linear-gradient(to top, #10B981, #34D399);"></div>
+                            <div class="bar" style="height:55%; background: linear-gradient(to top, #2ECC71, #5EDBA0);"></div>
+                            <div class="bar" style="height:78%; background: linear-gradient(to top, #2ECC71, #5EDBA0);"></div>
+                            <div class="bar" style="height:42%; background: linear-gradient(to top, #2ECC71, #5EDBA0);"></div>
+                            <div class="bar" style="height:91%; background: linear-gradient(to top, #2ECC71, #5EDBA0);"></div>
+                            <div class="bar" style="height:65%; background: linear-gradient(to top, #2ECC71, #5EDBA0);"></div>
+                            <div class="bar" style="height:83%; background: linear-gradient(to top, #2ECC71, #5EDBA0);"></div>
+                            <div class="bar" style="height:72%; background: linear-gradient(to top, #2ECC71, #5EDBA0);"></div>
                         </div>
                     </div>
                 </div>
@@ -1270,7 +1287,7 @@
         <div class="container">
             <div class="detail-grid">
                 <div class="detail-content reveal">
-                    <div class="section-badge" style="background: rgba(56,189,248,0.1); color: #0284C7; border-color: rgba(56,189,248,0.15);">Alerta Municipal y Comunal</div>
+                    <div class="section-badge" style="background: rgba(91,188,230,0.1); color: #3A8FBE; border-color: rgba(91,188,230,0.15);">Alerta Municipal y Comunal</div>
                     <h2>Tu municipio conectado con sus vecinos</h2>
                     <p>Plataforma web que integra APIs públicas chilenas para entregar alertas y servicios útiles a la comunidad. MVP operativo con piloto en Zapallar. Notificaciones directas vía WhatsApp.</p>
                     <ul class="detail-list">
@@ -1292,7 +1309,7 @@
                     </div>
                 </div>
                 <div class="detail-visual reveal-scale" data-parallax="0.03">
-                    <div class="visual-header" style="background: linear-gradient(135deg, #38BDF8, #0EA5E9);">
+                    <div class="visual-header" style="background: linear-gradient(135deg, #5BBCE6, #4DA8DA);">
                         <h4>AlertaMunicipal</h4>
                         <span class="visual-live">PILOTO ZAPALLAR</span>
                     </div>
@@ -1327,7 +1344,7 @@
     <section class="section credentials">
         <div class="container">
             <div class="section-header reveal">
-                <div class="section-badge" style="background: rgba(14,165,233,0.12); color: var(--accent); border-color: rgba(14,165,233,0.2);">Trayectoria</div>
+                <div class="section-badge" style="background: rgba(77,168,218,0.12); color: var(--accent); border-color: rgba(77,168,218,0.2);">Trayectoria</div>
                 <h2 style="color: var(--white);">Resultados que respaldan nuestra experiencia</h2>
             </div>
             <div class="cred-grid">
@@ -1349,11 +1366,11 @@
                 </div>
             </div>
             <div class="cert-row reveal">
-                <div class="cert-badge"><span class="cert-icon" style="background: rgba(14,165,233,0.2); color: var(--accent);">MS</span>Microsoft Certified</div>
+                <div class="cert-badge"><span class="cert-icon" style="background: rgba(77,168,218,0.2); color: var(--accent);">MS</span>Microsoft Certified</div>
                 <div class="cert-badge"><span class="cert-icon" style="background: rgba(220,38,38,0.15); color: #EF4444;">S</span>SENCE Acreditado</div>
                 <div class="cert-badge"><span class="cert-icon" style="background: rgba(168,85,247,0.15); color: #A855F7;">H</span>Harvard Business</div>
-                <div class="cert-badge"><span class="cert-icon" style="background: rgba(245,158,11,0.15); color: #F59E0B;">M</span>MIT Professional</div>
-                <div class="cert-badge"><span class="cert-icon" style="background: rgba(16,185,129,0.15); color: var(--green);">C</span>Cambridge English</div>
+                <div class="cert-badge"><span class="cert-icon" style="background: rgba(232,184,75,0.15); color: var(--warm);">M</span>MIT Professional</div>
+                <div class="cert-badge"><span class="cert-icon" style="background: rgba(46,204,113,0.15); color: var(--green);">C</span>Cambridge English</div>
             </div>
         </div>
     </section>
@@ -1457,11 +1474,11 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <div class="logo" style="margin-bottom: 0.5rem;">
-                        <div class="logo-symbol" style="width:32px; height:32px;">
-                            <svg viewBox="0 0 42 42" fill="none" style="width:32px; height:32px;"><path d="M21 10 L32 21 L21 32 L10 21Z" fill="url(#logo-grad3)"/><circle cx="21" cy="21" r="3.5" fill="#0B2545"/><defs><linearGradient id="logo-grad3" x1="10" y1="10" x2="32" y2="32"><stop offset="0%" stop-color="#0EA5E9"/><stop offset="100%" stop-color="#0B2545"/></linearGradient></defs></svg>
+                    <div class="logo logo--dark" style="margin-bottom: 0.5rem;">
+                        <div class="logo-symbol">
+                            <svg viewBox="0 0 120 60" fill="none"><defs><linearGradient id="inf-grad-f" x1="0" y1="30" x2="120" y2="30"><stop offset="0%" stop-color="#7CC4E8"/><stop offset="45%" stop-color="#5EDBA0"/><stop offset="100%" stop-color="#F0CC6E"/></linearGradient></defs><path d="M15 30 C15 18 25 10 35 18 C42 23 48 30 60 30 C72 30 78 23 85 18 C95 10 105 18 105 30 C105 42 95 50 85 42 C78 37 72 30 60 30 C48 30 42 37 35 42 C25 50 15 42 15 30Z" stroke="url(#inf-grad-f)" stroke-width="3.5" stroke-linecap="round" fill="none"/></svg>
                         </div>
-                        <span class="logo-text" style="color: var(--white); font-size: 1.15rem;">Duo<span>Capital</span></span>
+                        <span class="logo-text">Duo<span>Capital</span></span>
                     </div>
                     <p class="footer-brand-text">Capacitación, consultoría y tecnología municipal. Tres unidades especializadas con un solo respaldo.</p>
                 </div>
@@ -1497,7 +1514,7 @@
     <div class="dc-chat-window" id="dcChatWindow">
         <div class="dc-chat-header">
             <div class="dc-chat-avatar">
-                <svg viewBox="0 0 42 42" fill="none" style="width:22px; height:22px;"><path d="M21 10 L32 21 L21 32 L10 21Z" fill="rgba(255,255,255,0.9)"/><circle cx="21" cy="21" r="3" fill="rgba(14,165,233,0.8)"/></svg>
+                <svg viewBox="0 0 120 60" fill="none" style="width:26px; height:14px;"><path d="M15 30 C15 18 25 10 35 18 C42 23 48 30 60 30 C72 30 78 23 85 18 C95 10 105 18 105 30 C105 42 95 50 85 42 C78 37 72 30 60 30 C48 30 42 37 35 42 C25 50 15 42 15 30Z" stroke="rgba(255,255,255,0.9)" stroke-width="5" stroke-linecap="round" fill="none"/></svg>
             </div>
             <div class="dc-chat-header-info"><h4>Asistente DuoCapital</h4><p>Capacitación, Consultoría y Tecnología</p></div>
             <div class="dc-chat-status"></div>
