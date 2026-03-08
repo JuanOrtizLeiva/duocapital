@@ -298,12 +298,18 @@
         .hero h1 {
             color: var(--white); max-width: 850px; margin: 0 auto 1.5rem;
             opacity: 0; animation: hero-reveal 0.8s 0.4s forwards;
+            font-family: 'Inter', sans-serif;
+            font-weight: 200;
+            letter-spacing: 0.02em;
+            line-height: 1.2;
+            font-size: clamp(2rem, 5vw, 3.5rem);
         }
 
         .hero-gradient-text {
             background: linear-gradient(135deg, var(--white) 0%, var(--accent) 40%, var(--warm) 100%);
             -webkit-background-clip: text; -webkit-text-fill-color: transparent;
             background-clip: text;
+            font-weight: 300;
         }
 
         .hero-desc {
@@ -1476,7 +1482,7 @@
                 <div class="footer-brand">
                     <div class="logo logo--dark" style="margin-bottom: 0.5rem;">
                         <div class="logo-symbol">
-                            <svg viewBox="0 0 120 60" fill="none"><defs><linearGradient id="inf-grad-f" x1="0" y1="30" x2="120" y2="30"><stop offset="0%" stop-color="#4DA8DA"/><stop offset="45%" stop-color="#2ECC71"/><stop offset="100%" stop-color="#E8B84B"/></linearGradient></defs><path d="M16 30 C16 17 27 9 37 18 C43 24 50 30 60 30 C70 30 77 24 83 18 C93 9 104 17 104 30 C104 43 93 51 83 42 C77 36 70 30 60 30 C50 30 43 36 37 42 C27 51 16 43 16 30Z" stroke="url(#inf-grad-f)" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+                            <svg viewBox="0 0 120 60" fill="none"><defs><linearGradient id="inf-grad-f" x1="0" y1="30" x2="120" y2="30"><stop offset="0%" stop-color="#4DA8DA"/><stop offset="45%" stop-color="#2ECC71"/><stop offset="100%" stop-color="#E8B84B"/></linearGradient></defs><path class="logo-infinity-path" d="M16 30 C16 17 27 9 37 18 C43 24 50 30 60 30 C70 30 77 24 83 18 C93 9 104 17 104 30 C104 43 93 51 83 42 C77 36 70 30 60 30 C50 30 43 36 37 42 C27 51 16 43 16 30Z" stroke="url(#inf-grad-f)" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
                         </div>
                         <span class="logo-text">Duo<span>Capital</span></span>
                     </div>
