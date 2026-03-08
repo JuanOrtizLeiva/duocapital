@@ -121,17 +121,17 @@
         .nav-inner {
             max-width: 1200px; margin: 0 auto; padding: 0 1.5rem;
             display: flex; justify-content: space-between;
-            align-items: center; height: 72px;
+            align-items: center; height: 80px;
         }
 
         /* LOGO — Infinity artístico + tipografía futurista */
         .logo { display: flex; align-items: center; gap: 0.7rem; }
         .logo-symbol {
-            width: 48px; height: 28px; position: relative;
+            width: 90px; height: 50px; position: relative;
             display: flex; align-items: center; justify-content: center;
         }
         .logo-symbol svg {
-            width: 48px; height: 28px;
+            width: 90px; height: 50px;
             transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
         }
         .logo:hover .logo-symbol svg { transform: scale(1.08); }
@@ -145,7 +145,7 @@
         }
         .logo-text {
             font-family: 'Montserrat', sans-serif;
-            font-size: 1.25rem; font-weight: 900;
+            font-size: 1.65rem; font-weight: 900;
             letter-spacing: 0.12em; text-transform: uppercase;
         }
         /* Dark background version */
@@ -203,7 +203,7 @@
         .mobile-menu.active { right: 0; }
         .mobile-menu-header {
             display: flex; justify-content: space-between; align-items: center;
-            padding: 0 1.5rem; height: 72px; border-bottom: 1px solid var(--neutral-200);
+            padding: 0 1.5rem; height: 80px; border-bottom: 1px solid var(--neutral-200);
         }
         .mobile-menu-close {
             background: none; border: none; font-size: 1.75rem;
@@ -226,7 +226,7 @@
            ============================================= */
         .hero {
             min-height: 100vh; display: flex; align-items: center;
-            padding-top: 72px; position: relative; overflow: hidden;
+            padding-top: 80px; position: relative; overflow: hidden;
             background: var(--primary);
         }
 
@@ -1052,10 +1052,10 @@
                                 <stop offset="100%" stop-color="#E8B84B"/>
                             </linearGradient>
                         </defs>
-                        <!-- Artistic infinity — hand-drawn feel with varying thickness -->
-                        <path class="logo-infinity-path" d="M15 30 C15 18 25 10 35 18 C42 23 48 30 60 30 C72 30 78 23 85 18 C95 10 105 18 105 30 C105 42 95 50 85 42 C78 37 72 30 60 30 C48 30 42 37 35 42 C25 50 15 42 15 30Z" stroke="url(#inf-grad)" stroke-width="3.5" stroke-linecap="round" fill="none"/>
-                        <!-- Subtle inner glow line -->
-                        <path d="M22 30 C22 22 29 17 36 22 C42 26 50 30 60 30 C70 30 78 26 84 22 C91 17 98 22 98 30 C98 38 91 43 84 38 C78 34 70 30 60 30 C50 30 42 34 36 38 C29 43 22 38 22 30Z" stroke="url(#inf-grad)" stroke-width="1" stroke-linecap="round" fill="none" opacity="0.3"/>
+                        <!-- Artistic infinity — organic, slightly asymmetric, fully closed -->
+                        <path class="logo-infinity-path" d="M16 30 C16 17 27 9 37 18 C43 24 50 30 60 30 C70 30 77 24 83 18 C93 9 104 17 104 30 C104 43 93 51 83 42 C77 36 70 30 60 30 C50 30 43 36 37 42 C27 51 16 43 16 30Z" stroke="url(#inf-grad)" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                        <!-- Inner echo — same shape, thinner, subtle -->
+                        <path d="M16 30 C16 17 27 9 37 18 C43 24 50 30 60 30 C70 30 77 24 83 18 C93 9 104 17 104 30 C104 43 93 51 83 42 C77 36 70 30 60 30 C50 30 43 36 37 42 C27 51 16 43 16 30Z" stroke="url(#inf-grad)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.25"/>
                     </svg>
                 </div>
                 <span class="logo-text">Duo<span>Capital</span></span>
@@ -1079,7 +1079,7 @@
         <div class="mobile-menu-header">
             <div class="logo">
                 <div class="logo-symbol">
-                    <svg viewBox="0 0 120 60" fill="none"><defs><linearGradient id="inf-grad-m" x1="0" y1="30" x2="120" y2="30"><stop offset="0%" stop-color="#4DA8DA"/><stop offset="45%" stop-color="#2ECC71"/><stop offset="100%" stop-color="#E8B84B"/></linearGradient></defs><path d="M15 30 C15 18 25 10 35 18 C42 23 48 30 60 30 C72 30 78 23 85 18 C95 10 105 18 105 30 C105 42 95 50 85 42 C78 37 72 30 60 30 C48 30 42 37 35 42 C25 50 15 42 15 30Z" stroke="url(#inf-grad-m)" stroke-width="3.5" stroke-linecap="round" fill="none"/></svg>
+                    <svg viewBox="0 0 120 60" fill="none"><defs><linearGradient id="inf-grad-m" x1="0" y1="30" x2="120" y2="30"><stop offset="0%" stop-color="#4DA8DA"/><stop offset="45%" stop-color="#2ECC71"/><stop offset="100%" stop-color="#E8B84B"/></linearGradient></defs><path d="M16 30 C16 17 27 9 37 18 C43 24 50 30 60 30 C70 30 77 24 83 18 C93 9 104 17 104 30 C104 43 93 51 83 42 C77 36 70 30 60 30 C50 30 43 36 37 42 C27 51 16 43 16 30Z" stroke="url(#inf-grad-m)" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
                 </div>
                 <span class="logo-text">Duo<span>Capital</span></span>
             </div>
@@ -1476,7 +1476,7 @@
                 <div class="footer-brand">
                     <div class="logo logo--dark" style="margin-bottom: 0.5rem;">
                         <div class="logo-symbol">
-                            <svg viewBox="0 0 120 60" fill="none"><defs><linearGradient id="inf-grad-f" x1="0" y1="30" x2="120" y2="30"><stop offset="0%" stop-color="#7CC4E8"/><stop offset="45%" stop-color="#5EDBA0"/><stop offset="100%" stop-color="#F0CC6E"/></linearGradient></defs><path d="M15 30 C15 18 25 10 35 18 C42 23 48 30 60 30 C72 30 78 23 85 18 C95 10 105 18 105 30 C105 42 95 50 85 42 C78 37 72 30 60 30 C48 30 42 37 35 42 C25 50 15 42 15 30Z" stroke="url(#inf-grad-f)" stroke-width="3.5" stroke-linecap="round" fill="none"/></svg>
+                            <svg viewBox="0 0 120 60" fill="none"><defs><linearGradient id="inf-grad-f" x1="0" y1="30" x2="120" y2="30"><stop offset="0%" stop-color="#7CC4E8"/><stop offset="45%" stop-color="#5EDBA0"/><stop offset="100%" stop-color="#F0CC6E"/></linearGradient></defs><path d="M16 30 C16 17 27 9 37 18 C43 24 50 30 60 30 C70 30 77 24 83 18 C93 9 104 17 104 30 C104 43 93 51 83 42 C77 36 70 30 60 30 C50 30 43 36 37 42 C27 51 16 43 16 30Z" stroke="url(#inf-grad-f)" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
                         </div>
                         <span class="logo-text">Duo<span>Capital</span></span>
                     </div>
@@ -1557,7 +1557,7 @@
             a.addEventListener('click', function(e) {
                 e.preventDefault();
                 var t = document.querySelector(this.getAttribute('href'));
-                if (t) window.scrollTo({ top: t.offsetTop - 72, behavior: 'smooth' });
+                if (t) window.scrollTo({ top: t.offsetTop - 80, behavior: 'smooth' });
             });
         });
 
