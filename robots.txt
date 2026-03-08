@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://duocapital.cl/sitemap.xml
