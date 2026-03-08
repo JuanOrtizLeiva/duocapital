@@ -4,75 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DuoCapital | Capacitación, Consultoría y Tecnología Municipal</title>
-    <meta name="description" content="DuoCapital agrupa soluciones profesionales en capacitación SENCE, consultoría en datos e IA, y tecnología para municipios. Tecnipro, JRO Asesorías y Alerta Municipal.">
+    <meta name="description" content="DuoCapital agrupa soluciones profesionales en capacitación SENCE, consultoría en datos e IA, y tecnología para municipios.">
     <meta property="og:title" content="DuoCapital | Capacitación, Consultoría y Tecnología Municipal">
-    <meta property="og:description" content="Tres unidades de negocio especializadas: Instituto Tecnipro, JRO Asesorías y Alerta Municipal y Comunal.">
+    <meta property="og:description" content="Tres unidades especializadas: Instituto Tecnipro, JRO Asesorías y Alerta Municipal y Comunal.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://duocapital.cl">
     <meta property="og:locale" content="es_CL">
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23091E3A'/><path d='M6 16 C6 12 10 8 14 12 C16 14 16 14 18 12 C22 8 26 12 26 16 C26 20 22 24 18 20 C16 18 16 18 14 20 C10 24 6 20 6 16Z' fill='none' stroke='%234DA8DA' stroke-width='2' stroke-linecap='round'/></svg>">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 80' fill='none'><rect width='120' height='80' rx='16' fill='%23090c12'/><defs><linearGradient id='g' x1='0' y1='38' x2='120' y2='38'><stop offset='0%25' stop-color='%234DA8DA'/><stop offset='55%25' stop-color='%232ECC71'/><stop offset='100%25' stop-color='%23E8B84B'/></linearGradient></defs><path d='M22 38C22 26 30 20 38 28C43 33 49 38 56 38C63 38 69 32 76 25C90 10 112 18 112 38C112 60 88 68 74 52C67 44 61 39 54 39C47 39 40 46 34 51C26 58 20 52 22 38Z' stroke='url(%23g)' stroke-width='4.5' stroke-linecap='round' stroke-linejoin='round' fill='none'/></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        /* =============================================
-           DUOCAPITAL — WORLD-CLASS DESIGN SYSTEM 2026
-           ============================================= */
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
         :root {
-            /* Psicología del color:
-               - Primary (#091E3A): Azul profundo → autoridad, confianza institucional, seriedad
-               - Accent (#4DA8DA): Azul medio cálido → accesibilidad, innovación, cercanía tecnológica
-               - Green (#2ECC71): Verde vivo → crecimiento, prosperidad, resultados positivos
-               - Warm (#E8B84B): Dorado cálido → excelencia, valor premium, aspiración
-               Juntos transmiten: "Profesionalismo accesible con aspiración de excelencia"
-            */
-            --primary: #091E3A;
-            --primary-mid: #0F2D52;
-            --primary-light: #163D6B;
-            --accent: #4DA8DA;
-            --accent-hover: #3A8FBE;
-            --accent-glow: rgba(77,168,218,0.15);
-            --green: #2ECC71;
-            --green-hover: #27AE60;
-            --warm: #E8B84B;
-            --warm-hover: #D4A33A;
-            --sky: #5BBCE6;
-            --neutral-50: #F7F9FC;
-            --neutral-100: #EEF2F7;
-            --neutral-200: #DDE3ED;
-            --neutral-700: #3D4F65;
-            --neutral-800: #1C2A3A;
-            --neutral-900: #0D1B2A;
-            --white: #FFFFFF;
-            --text: #0D1B2A;
-            --text-muted: #5A6B7F;
-            --radius: 16px;
-            --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            /* Dark palette (header + hero only) */
+            --dark-bg: linear-gradient(155deg, #090c12 0%, #0c0e16 50%, #0e0c12 100%);
+            --dark-bg-solid: #07070b;
+            --dark-surface: #0d0d14;
+            --dark-border: #191926;
+            --dark-text: #ebebf2;
+            --dark-text-sec: #6e6e88;
+            --dark-text-dim: #45455a;
+            /* Light palette (rest of site) */
+            --bg-light: #fafbfc;
+            --surface-light: #ffffff;
+            --border-light: #e2e6ec;
+            --border-hover-light: rgba(77,168,218,0.25);
+            --text-dark: #1a1d26;
+            --text-body: #4a4f5e;
+            --text-muted: #7c8295;
+            /* Shared accents */
+            --accent-blue: #4DA8DA;
+            --accent-green: #2ECC71;
+            --accent-gold: #E8B84B;
+            --white: #ffffff;
+            --radius: 14px;
+            --transition: 0.35s cubic-bezier(0.22, 1, 0.36, 1);
         }
 
         html { scroll-behavior: smooth; font-size: 16px; }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            color: var(--text);
-            background: var(--white);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 300;
+            color: var(--text-dark);
+            background: var(--bg-light);
             -webkit-font-smoothing: antialiased;
             overflow-x: hidden;
         }
 
         h1, h2, h3, h4 {
             font-family: 'Montserrat', sans-serif;
-            font-weight: 900;
-            line-height: 1.1;
-            color: var(--primary);
+            font-weight: 300;
+            line-height: 1.15;
+            color: var(--text-dark);
+            letter-spacing: 0.02em;
         }
 
-        h1 { font-size: clamp(2.25rem, 5.5vw, 3.75rem); letter-spacing: -0.04em; }
-        h2 { font-size: clamp(1.75rem, 4vw, 2.75rem); letter-spacing: -0.03em; }
-        h3 { font-size: clamp(1.2rem, 2.5vw, 1.6rem); letter-spacing: -0.02em; }
-        p { color: var(--text-muted); line-height: 1.7; }
+        h1 { font-size: clamp(1.8rem, 4.5vw, 3.2rem); }
+        h2 { font-size: clamp(1.5rem, 3.5vw, 2.4rem); letter-spacing: 0.03em; }
+        h3 { font-size: clamp(1.1rem, 2.5vw, 1.5rem); }
+        p { color: var(--text-body); line-height: 1.75; }
         a { color: inherit; text-decoration: none; }
 
         .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
@@ -82,41 +75,38 @@
         .section-header { text-align: center; margin-bottom: 4rem; }
         .section-badge {
             display: inline-flex; align-items: center; gap: 0.4rem;
-            font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em;
-            text-transform: uppercase; padding: 0.45rem 1.1rem;
+            font-size: 0.7rem; font-weight: 500; letter-spacing: 4px;
+            text-transform: uppercase; padding: 0.5rem 1.2rem;
             border-radius: 30px; margin-bottom: 1.25rem;
-            background: var(--accent-glow); color: var(--accent);
+            background: rgba(77,168,218,0.06);
             border: 1px solid rgba(77,168,218,0.15);
+            color: var(--accent-blue);
         }
         .section-badge::before {
-            content: ''; width: 6px; height: 6px; border-radius: 50%;
-            background: var(--accent); animation: pulse-dot 2s infinite;
+            content: ''; width: 5px; height: 5px; border-radius: 50%;
+            background: var(--accent-blue); animation: pulse-dot 2s infinite;
         }
         @keyframes pulse-dot {
             0%, 100% { opacity: 1; transform: scale(1); }
-            50% { opacity: 0.4; transform: scale(0.7); }
+            50% { opacity: 0.3; transform: scale(0.6); }
         }
         .section-sub {
-            font-size: 1.05rem; color: var(--text-muted);
-            max-width: 580px; margin: 1rem auto 0; line-height: 1.7;
+            font-size: 1rem; color: var(--text-body);
+            max-width: 560px; margin: 1rem auto 0; line-height: 1.75;
         }
 
-        /* =============================================
-           HEADER — GLASSMORPHISM NAV
-           ============================================= */
+        /* ==========================================
+           HEADER
+           ========================================== */
         header {
             position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
-            background: rgba(255,255,255,0.85);
-            backdrop-filter: blur(20px) saturate(1.8);
-            -webkit-backdrop-filter: blur(20px) saturate(1.8);
-            transition: all var(--transition);
+            background: rgba(9,12,18,0.92);
+            backdrop-filter: blur(20px) saturate(1.5);
+            -webkit-backdrop-filter: blur(20px) saturate(1.5);
             border-bottom: 1px solid transparent;
+            transition: all var(--transition);
         }
-        header.scrolled {
-            background: rgba(255,255,255,0.95);
-            border-bottom-color: var(--neutral-200);
-            box-shadow: 0 1px 30px rgba(9,30,58,0.06);
-        }
+        header.scrolled { border-bottom-color: var(--dark-border); background: rgba(9,12,18,0.97); }
 
         .nav-inner {
             max-width: 1200px; margin: 0 auto; padding: 0 1.5rem;
@@ -124,63 +114,40 @@
             align-items: center; height: 80px;
         }
 
-        /* LOGO — Infinity artístico + tipografía futurista */
-        .logo { display: flex; align-items: center; gap: 0.7rem; }
-        .logo-symbol {
-            width: 90px; height: 50px; position: relative;
-            display: flex; align-items: center; justify-content: center;
-        }
-        .logo-symbol svg {
-            width: 90px; height: 50px;
-            transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
-        }
-        .logo:hover .logo-symbol svg { transform: scale(1.08); }
+        .logo { display: flex; align-items: center; gap: 0; }
+        .logo svg { height: 40px; width: auto; transition: all 0.5s cubic-bezier(0.34,1.56,0.64,1); }
+        .logo:hover svg { transform: scale(1.05); }
+
         .logo-infinity-path {
-            stroke-dasharray: 500;
-            stroke-dashoffset: 500;
-            animation: draw-infinity 1.8s ease forwards 0.3s;
+            stroke-dasharray: 600;
+            stroke-dashoffset: 600;
+            animation: draw-inf 2s ease forwards 0.3s;
         }
-        @keyframes draw-infinity {
-            to { stroke-dashoffset: 0; }
-        }
-        .logo-text {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.65rem; font-weight: 900;
-            letter-spacing: 0.12em; text-transform: uppercase;
-        }
-        /* Dark background version */
-        .logo--dark .logo-text { color: var(--white); }
-        .logo--dark .logo-text span { color: var(--accent); }
-        /* Light background (default) */
-        .logo-text { color: var(--primary); }
-        .logo-text span { color: var(--accent); }
+        @keyframes draw-inf { to { stroke-dashoffset: 0; } }
 
         .nav-links {
-            display: none; list-style: none;
-            gap: 0.5rem; align-items: center;
+            display: none; list-style: none; gap: 0.25rem; align-items: center;
         }
         @media (min-width: 1024px) { .nav-links { display: flex; } }
 
         .nav-link {
-            font-size: 0.88rem; font-weight: 500; color: var(--text-muted);
-            padding: 0.5rem 0.85rem; border-radius: 8px;
-            transition: all var(--transition); position: relative;
+            font-size: 0.82rem; font-weight: 400; color: var(--dark-text-sec);
+            padding: 0.5rem 0.9rem; border-radius: 8px;
+            transition: all var(--transition); letter-spacing: 0.5px;
         }
-        .nav-link:hover {
-            color: var(--primary); background: var(--neutral-100);
-        }
+        .nav-link:hover { color: var(--dark-text); background: rgba(255,255,255,0.05); }
 
         .nav-cta {
-            background: var(--primary); color: var(--white);
-            padding: 0.55rem 1.4rem; border-radius: 10px;
-            font-weight: 700; font-size: 0.88rem;
-            transition: all var(--transition);
-            box-shadow: 0 2px 10px rgba(9,30,58,0.15);
+            background: rgba(77,168,218,0.1); color: var(--accent-blue);
+            border: 1px solid rgba(77,168,218,0.2);
+            padding: 0.5rem 1.3rem; border-radius: 8px;
+            font-weight: 500; font-size: 0.82rem;
+            transition: all var(--transition); letter-spacing: 0.5px;
         }
         .nav-cta:hover {
-            background: var(--accent);
-            box-shadow: 0 4px 20px rgba(77,168,218,0.3);
-            transform: translateY(-1px);
+            background: rgba(77,168,218,0.15);
+            border-color: rgba(77,168,218,0.35);
+            box-shadow: 0 4px 20px rgba(77,168,218,0.1);
         }
 
         .menu-toggle {
@@ -188,89 +155,66 @@
             background: none; border: none; cursor: pointer; padding: 6px;
         }
         @media (min-width: 1024px) { .menu-toggle { display: none; } }
-        .menu-toggle span {
-            width: 22px; height: 2px; background: var(--primary);
-            border-radius: 2px; transition: all var(--transition);
-        }
+        .menu-toggle span { width: 22px; height: 1.5px; background: var(--dark-text-sec); border-radius: 2px; transition: all var(--transition); }
 
-        /* Mobile menu */
         .mobile-menu {
             position: fixed; top: 0; right: -100%; width: 100%;
-            height: 100vh; height: 100dvh; background: var(--white);
-            z-index: 1001; transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            height: 100vh; height: 100dvh;
+            background: var(--dark-bg-solid); z-index: 1001;
+            transition: right 0.4s cubic-bezier(0.4,0,0.2,1);
             display: flex; flex-direction: column;
         }
         .mobile-menu.active { right: 0; }
         .mobile-menu-header {
             display: flex; justify-content: space-between; align-items: center;
-            padding: 0 1.5rem; height: 80px; border-bottom: 1px solid var(--neutral-200);
+            padding: 0 1.5rem; height: 80px; border-bottom: 1px solid var(--dark-border);
         }
         .mobile-menu-close {
             background: none; border: none; font-size: 1.75rem;
-            cursor: pointer; color: var(--text); width: 44px; height: 44px;
+            cursor: pointer; color: var(--dark-text-sec); width: 44px; height: 44px;
             display: flex; align-items: center; justify-content: center;
-            border-radius: 12px; transition: background var(--transition);
         }
-        .mobile-menu-close:hover { background: var(--neutral-100); }
-        .mobile-menu-nav { padding: 1.5rem; flex: 1; }
+        .mobile-menu-nav { padding: 1.5rem; }
         .mobile-menu-nav a {
-            display: flex; align-items: center; gap: 0.75rem;
-            padding: 1.1rem 0.5rem; font-size: 1.05rem; font-weight: 600;
-            color: var(--text); border-bottom: 1px solid var(--neutral-100);
-            transition: all var(--transition);
+            display: block; padding: 1rem 0.5rem; font-size: 1rem;
+            font-weight: 400; color: var(--dark-text-sec);
+            border-bottom: 1px solid var(--dark-border); transition: all var(--transition);
         }
-        .mobile-menu-nav a:hover { color: var(--accent); padding-left: 1rem; }
+        .mobile-menu-nav a:hover { color: var(--dark-text); padding-left: 1rem; }
 
-        /* =============================================
-           HERO — CINEMATIC
-           ============================================= */
+        /* ==========================================
+           HERO
+           ========================================== */
         .hero {
             min-height: 100vh; display: flex; align-items: center;
             padding-top: 80px; position: relative; overflow: hidden;
-            background: var(--primary);
+            background: var(--dark-bg);
+            color: var(--dark-text);
         }
 
-        /* Animated mesh gradient background */
         .hero-bg {
             position: absolute; inset: 0; z-index: 0;
             background:
-                radial-gradient(ellipse 80% 60% at 70% 20%, rgba(77,168,218,0.2) 0%, transparent 50%),
-                radial-gradient(ellipse 60% 80% at 20% 80%, rgba(46,204,113,0.12) 0%, transparent 50%),
-                radial-gradient(ellipse 50% 50% at 50% 50%, rgba(91,188,230,0.06) 0%, transparent 50%),
-                linear-gradient(160deg, #07192E 0%, var(--primary) 30%, var(--primary-mid) 70%, #0D2E55 100%);
-            animation: meshMove 20s ease-in-out infinite alternate;
-        }
-        @keyframes meshMove {
-            0% { background-position: 0% 0%, 100% 100%, 50% 50%, 0% 0%; }
-            100% { background-position: 100% 100%, 0% 0%, 30% 70%, 0% 0%; }
+                radial-gradient(ellipse 70% 50% at 65% 25%, rgba(77,168,218,0.06) 0%, transparent 50%),
+                radial-gradient(ellipse 50% 70% at 25% 75%, rgba(46,204,113,0.04) 0%, transparent 50%),
+                radial-gradient(ellipse 40% 40% at 80% 80%, rgba(232,184,75,0.03) 0%, transparent 50%);
         }
 
-        /* Floating geometric shapes */
-        .hero-shapes {
-            position: absolute; inset: 0; z-index: 1; pointer-events: none;
-            overflow: hidden;
-        }
-        .hero-shape {
-            position: absolute; border: 1px solid rgba(77,168,218,0.12);
-            border-radius: 50%; animation: float-shape 25s ease-in-out infinite;
-        }
-        .hero-shape:nth-child(1) { width: 400px; height: 400px; top: -10%; right: -5%; animation-duration: 22s; }
-        .hero-shape:nth-child(2) { width: 250px; height: 250px; bottom: 10%; left: -3%; animation-duration: 28s; animation-delay: -5s; border-color: rgba(46,204,113,0.1); }
-        .hero-shape:nth-child(3) { width: 150px; height: 150px; top: 40%; right: 20%; animation-duration: 18s; animation-delay: -10s; }
-        .hero-shape:nth-child(4) { width: 80px; height: 80px; top: 20%; left: 15%; animation-duration: 15s; animation-delay: -3s; border-color: rgba(91,188,230,0.15); }
-
-        @keyframes float-shape {
-            0%, 100% { transform: translateY(0) rotate(0deg); opacity: 0.5; }
-            25% { transform: translateY(-20px) rotate(90deg); opacity: 0.8; }
-            50% { transform: translateY(10px) rotate(180deg); opacity: 0.4; }
-            75% { transform: translateY(-15px) rotate(270deg); opacity: 0.7; }
+        /* Grid pattern overlay */
+        .hero::before {
+            content: ''; position: absolute; inset: 0; z-index: 1;
+            background-image:
+                linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px);
+            background-size: 60px 60px;
+            pointer-events: none;
         }
 
-        /* Scan line effect */
+        /* Scan line */
         .hero::after {
             content: ''; position: absolute; top: 0; left: 0; right: 0;
-            height: 1px; background: linear-gradient(90deg, transparent, rgba(77,168,218,0.3), transparent);
-            animation: scan 6s ease-in-out infinite; z-index: 2;
+            height: 1px; background: linear-gradient(90deg, transparent, rgba(77,168,218,0.2), transparent);
+            animation: scan 8s ease-in-out infinite; z-index: 2;
         }
         @keyframes scan {
             0% { top: 0; opacity: 0; }
@@ -286,217 +230,186 @@
 
         .hero-eyebrow {
             display: inline-flex; align-items: center; gap: 0.5rem;
-            font-size: 0.8rem; font-weight: 600; letter-spacing: 0.12em;
-            text-transform: uppercase; color: var(--accent);
-            margin-bottom: 1.5rem;
-            opacity: 0; animation: hero-fade-in 0.8s 0.2s forwards;
+            font-size: 0.72rem; font-weight: 500; letter-spacing: 4px;
+            text-transform: uppercase; color: var(--dark-text-dim);
+            margin-bottom: 2rem;
+            opacity: 0; animation: hero-fade 0.8s 0.2s forwards;
         }
         .hero-eyebrow::before, .hero-eyebrow::after {
-            content: ''; width: 30px; height: 1px; background: var(--accent); opacity: 0.5;
+            content: ''; width: 30px; height: 1px;
+            background: linear-gradient(90deg, transparent, var(--dark-border));
+        }
+        .hero-eyebrow::after {
+            background: linear-gradient(90deg, var(--dark-border), transparent);
         }
 
         .hero h1 {
-            color: var(--white); max-width: 850px; margin: 0 auto 1.5rem;
+            max-width: 800px; margin: 0 auto 1.5rem;
+            font-weight: 200; letter-spacing: 0.02em; line-height: 1.25;
+            color: var(--dark-text);
             opacity: 0; animation: hero-reveal 0.8s 0.4s forwards;
-            font-family: 'Inter', sans-serif;
-            font-weight: 200;
-            letter-spacing: 0.02em;
-            line-height: 1.2;
-            font-size: clamp(2rem, 5vw, 3.5rem);
         }
 
         .hero-gradient-text {
-            background: linear-gradient(135deg, var(--white) 0%, var(--accent) 40%, var(--warm) 100%);
+            background: linear-gradient(135deg, var(--dark-text) 0%, var(--accent-blue) 40%, var(--accent-gold) 100%);
             -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-            background-clip: text;
-            font-weight: 300;
+            background-clip: text; font-weight: 300;
         }
 
         .hero-desc {
-            font-size: 1.15rem; color: rgba(255,255,255,0.6);
-            max-width: 620px; margin: 0 auto 2.5rem; line-height: 1.8;
-            opacity: 0; animation: hero-fade-in 0.8s 0.6s forwards;
+            font-size: 1.05rem; color: var(--dark-text-sec);
+            max-width: 580px; margin: 0 auto 2.5rem; line-height: 1.8;
+            opacity: 0; animation: hero-fade 0.8s 0.6s forwards;
         }
 
         .hero-actions {
             display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;
-            opacity: 0; animation: hero-fade-in 0.8s 0.8s forwards;
-        }
-
-        .btn-hero {
-            display: inline-flex; align-items: center; gap: 0.6rem;
-            padding: 0.9rem 2rem; border-radius: 12px;
-            font-weight: 700; font-size: 0.95rem;
-            transition: all var(--transition);
-        }
-        .btn-hero svg { width: 18px; height: 18px; transition: transform var(--transition); }
-
-        .btn-hero--primary {
-            background: var(--accent); color: var(--white);
-            box-shadow: 0 4px 20px rgba(77,168,218,0.35);
-        }
-        .btn-hero--primary:hover {
-            background: var(--accent-hover);
-            box-shadow: 0 8px 30px rgba(77,168,218,0.5);
-            transform: translateY(-2px);
-        }
-        .btn-hero--primary:hover svg { transform: translateY(2px); }
-
-        .btn-hero--ghost {
-            background: rgba(255,255,255,0.06); color: var(--white);
-            border: 1px solid rgba(255,255,255,0.15);
-            backdrop-filter: blur(4px);
-        }
-        .btn-hero--ghost:hover {
-            background: rgba(255,255,255,0.12);
-            border-color: rgba(255,255,255,0.3);
-            transform: translateY(-2px);
+            opacity: 0; animation: hero-fade 0.8s 0.8s forwards;
         }
 
         @keyframes hero-reveal {
-            from { opacity: 0; transform: translateY(30px); filter: blur(4px); }
+            from { opacity: 0; transform: translateY(20px); filter: blur(3px); }
             to { opacity: 1; transform: translateY(0); filter: blur(0); }
         }
-        @keyframes hero-fade-in {
-            from { opacity: 0; transform: translateY(20px); }
+        @keyframes hero-fade {
+            from { opacity: 0; transform: translateY(16px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* Trust bar */
+        .btn {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            padding: 0.75rem 1.8rem; border-radius: 10px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500; font-size: 0.88rem;
+            transition: all var(--transition); letter-spacing: 0.5px;
+        }
+        .btn svg { width: 16px; height: 16px; transition: transform var(--transition); }
+        .btn:hover svg { transform: translateY(2px); }
+
+        .btn--primary {
+            background: rgba(77,168,218,0.1); color: var(--accent-blue);
+            border: 1px solid rgba(77,168,218,0.2);
+        }
+        .btn--primary:hover {
+            background: rgba(77,168,218,0.15);
+            border-color: rgba(77,168,218,0.35);
+            box-shadow: 0 8px 30px rgba(77,168,218,0.1);
+            transform: translateY(-2px);
+        }
+        .btn--ghost {
+            background: transparent; color: var(--dark-text-sec);
+            border: 1px solid var(--dark-border);
+        }
+        .btn--ghost:hover {
+            color: var(--dark-text); border-color: rgba(255,255,255,0.15);
+            transform: translateY(-2px);
+        }
+
+        /* Trust */
         .trust-bar {
             display: grid; grid-template-columns: repeat(3, 1fr);
-            gap: 1rem; margin-top: 4rem; max-width: 680px;
+            gap: 1rem; margin-top: 4rem; max-width: 640px;
             margin-left: auto; margin-right: auto;
-            opacity: 0; animation: hero-fade-in 0.8s 1s forwards;
+            opacity: 0; animation: hero-fade 0.8s 1s forwards;
         }
         .trust-item {
             text-align: center; padding: 1.25rem 1rem;
-            background: rgba(255,255,255,0.04);
-            border: 1px solid rgba(255,255,255,0.07);
-            border-radius: 14px; backdrop-filter: blur(4px);
-            transition: all var(--transition);
+            background: var(--dark-surface); border: 1px solid var(--dark-border);
+            border-radius: var(--radius); transition: all var(--transition);
         }
         .trust-item:hover {
-            background: rgba(77,168,218,0.08);
             border-color: rgba(77,168,218,0.2);
             transform: translateY(-3px);
         }
         .trust-number {
             font-family: 'Montserrat', sans-serif;
-            font-size: 2.25rem; font-weight: 900;
-            background: linear-gradient(135deg, var(--accent), var(--sky));
+            font-size: 2rem; font-weight: 600; line-height: 1;
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-green));
             -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-            background-clip: text; line-height: 1;
+            background-clip: text;
         }
-        .trust-label {
-            font-size: 0.78rem; color: rgba(255,255,255,0.45);
-            margin-top: 0.3rem; font-weight: 500;
-        }
+        .trust-label { font-size: 0.72rem; color: var(--dark-text-dim); margin-top: 0.35rem; letter-spacing: 1px; }
 
         @media (max-width: 600px) {
-            .trust-bar { grid-template-columns: 1fr; max-width: 260px; }
+            .trust-bar { grid-template-columns: 1fr; max-width: 240px; }
         }
 
-        /* =============================================
-           UNITS CARDS — GLASSMORPHISM + GLOW
-           ============================================= */
-        .units-bg { background: var(--neutral-50); }
-
+        /* ==========================================
+           UNITS CARDS
+           ========================================== */
         .units-grid {
-            display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem;
         }
         @media (max-width: 968px) {
-            .units-grid { grid-template-columns: 1fr; max-width: 440px; margin: 0 auto; }
+            .units-grid { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; }
         }
 
         .unit-card {
-            background: var(--white); border: 1px solid var(--neutral-200);
+            background: var(--surface-light); border: 1px solid var(--border-light);
             border-radius: var(--radius); padding: 2rem;
             display: flex; flex-direction: column;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative; overflow: hidden;
-        }
-
-        /* Glow effect on hover */
-        .unit-card::before {
-            content: ''; position: absolute; top: -50%; left: -50%;
-            width: 200%; height: 200%; border-radius: 50%;
-            opacity: 0; transition: opacity 0.5s;
-            pointer-events: none;
-        }
-        .unit-card:hover::before { opacity: 1; }
-
-        .unit-card::after {
-            content: ''; position: absolute; top: 0; left: 0; right: 0;
-            height: 3px; transform: scaleX(0); transform-origin: left;
-            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .unit-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
-            border-color: transparent;
-        }
-        .unit-card:hover::after { transform: scaleX(1); }
-
-        .unit-card--tecnipro::before { background: radial-gradient(circle, rgba(77,168,218,0.06), transparent 60%); }
-        .unit-card--tecnipro::after { background: linear-gradient(90deg, var(--accent), var(--sky)); }
-        .unit-card--jro::before { background: radial-gradient(circle, rgba(46,204,113,0.06), transparent 60%); }
-        .unit-card--jro::after { background: linear-gradient(90deg, var(--green), #5EDBA0); }
-        .unit-card--alerta::before { background: radial-gradient(circle, rgba(91,188,230,0.06), transparent 60%); }
-        .unit-card--alerta::after { background: linear-gradient(90deg, var(--sky), var(--accent)); }
-
-        .unit-icon {
-            width: 56px; height: 56px; border-radius: 14px;
-            display: flex; align-items: center; justify-content: center;
-            margin-bottom: 1.5rem; position: relative;
-            transition: transform var(--transition);
-        }
-        .unit-card:hover .unit-icon { transform: scale(1.1) rotate(-3deg); }
-        .unit-icon svg { width: 28px; height: 28px; position: relative; z-index: 1; }
-
-        .unit-card--tecnipro .unit-icon { background: rgba(77,168,218,0.1); color: var(--accent); }
-        .unit-card--jro .unit-icon { background: rgba(46,204,113,0.1); color: var(--green); }
-        .unit-card--alerta .unit-icon { background: rgba(91,188,230,0.1); color: var(--sky); }
-
-        .unit-tag {
-            font-size: 0.7rem; font-weight: 800; text-transform: uppercase;
-            letter-spacing: 0.1em; margin-bottom: 0.6rem;
-        }
-        .unit-card--tecnipro .unit-tag { color: var(--accent); }
-        .unit-card--jro .unit-tag { color: var(--green); }
-        .unit-card--alerta .unit-tag { color: #3A8FBE; }
-
-        .unit-card h3 { font-size: 1.3rem; margin-bottom: 0.4rem; }
-        .unit-tagline {
-            font-size: 0.9rem; font-weight: 600; color: var(--text-muted);
-            font-style: italic; margin-bottom: 0.8rem; opacity: 0.8;
-        }
-        .unit-desc {
-            font-size: 0.88rem; color: var(--text-muted);
-            line-height: 1.65; flex: 1;
-        }
-
-        .unit-btn {
-            display: inline-flex; align-items: center; gap: 0.5rem;
-            font-size: 0.88rem; font-weight: 700; margin-top: 1.5rem;
-            padding: 0.7rem 1.3rem; border-radius: 10px;
             transition: all var(--transition); position: relative; overflow: hidden;
         }
-        .unit-btn svg { width: 16px; height: 16px; transition: transform var(--transition); }
-        .unit-btn:hover svg { transform: translateX(4px); }
+        .unit-card::before {
+            content: ''; position: absolute; top: 0; left: 0; right: 0;
+            height: 2px; transform: scaleX(0); transform-origin: left;
+            transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .unit-card:hover {
+            border-color: var(--border-hover-light);
+            transform: translateY(-6px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+        }
+        .unit-card:hover::before { transform: scaleX(1); }
 
-        .unit-card--tecnipro .unit-btn { background: rgba(77,168,218,0.08); color: var(--accent); }
-        .unit-card--tecnipro .unit-btn:hover { background: var(--accent); color: var(--white); box-shadow: 0 4px 15px rgba(77,168,218,0.3); }
-        .unit-card--jro .unit-btn { background: rgba(46,204,113,0.08); color: var(--green); }
-        .unit-card--jro .unit-btn:hover { background: var(--green); color: var(--white); box-shadow: 0 4px 15px rgba(46,204,113,0.3); }
-        .unit-card--alerta .unit-btn { background: rgba(91,188,230,0.08); color: #3A8FBE; }
-        .unit-card--alerta .unit-btn:hover { background: var(--accent); color: var(--white); box-shadow: 0 4px 15px rgba(77,168,218,0.3); }
+        .unit-card--tecnipro::before { background: linear-gradient(90deg, var(--accent-blue), transparent); }
+        .unit-card--jro::before { background: linear-gradient(90deg, var(--accent-green), transparent); }
+        .unit-card--alerta::before { background: linear-gradient(90deg, var(--accent-gold), transparent); }
 
-        /* =============================================
+        .unit-icon {
+            width: 48px; height: 48px; border-radius: 12px;
+            display: flex; align-items: center; justify-content: center;
+            margin-bottom: 1.5rem; transition: transform var(--transition);
+        }
+        .unit-card:hover .unit-icon { transform: scale(1.08); }
+        .unit-icon svg { width: 24px; height: 24px; }
+
+        .unit-card--tecnipro .unit-icon { background: rgba(77,168,218,0.08); color: var(--accent-blue); }
+        .unit-card--jro .unit-icon { background: rgba(46,204,113,0.08); color: var(--accent-green); }
+        .unit-card--alerta .unit-icon { background: rgba(232,184,75,0.08); color: var(--accent-gold); }
+
+        .unit-tag {
+            font-size: 0.65rem; font-weight: 600; text-transform: uppercase;
+            letter-spacing: 3px; margin-bottom: 0.6rem;
+        }
+        .unit-card--tecnipro .unit-tag { color: var(--accent-blue); }
+        .unit-card--jro .unit-tag { color: var(--accent-green); }
+        .unit-card--alerta .unit-tag { color: var(--accent-gold); }
+
+        .unit-card h3 { font-weight: 500; margin-bottom: 0.4rem; }
+        .unit-tagline { font-size: 0.85rem; font-style: italic; color: var(--text-muted); margin-bottom: 0.8rem; }
+        .unit-desc { font-size: 0.85rem; color: var(--text-body); line-height: 1.7; flex: 1; }
+
+        .unit-btn {
+            display: inline-flex; align-items: center; gap: 0.4rem;
+            font-size: 0.82rem; font-weight: 500; margin-top: 1.5rem;
+            padding: 0.6rem 1.1rem; border-radius: 8px;
+            transition: all var(--transition); letter-spacing: 0.5px;
+        }
+        .unit-btn svg { width: 14px; height: 14px; transition: transform var(--transition); }
+        .unit-btn:hover svg { transform: translateX(3px); }
+
+        .unit-card--tecnipro .unit-btn { background: rgba(77,168,218,0.08); color: var(--accent-blue); border: 1px solid rgba(77,168,218,0.15); }
+        .unit-card--tecnipro .unit-btn:hover { background: rgba(77,168,218,0.14); border-color: rgba(77,168,218,0.3); }
+        .unit-card--jro .unit-btn { background: rgba(46,204,113,0.08); color: var(--accent-green); border: 1px solid rgba(46,204,113,0.15); }
+        .unit-card--jro .unit-btn:hover { background: rgba(46,204,113,0.14); border-color: rgba(46,204,113,0.3); }
+        .unit-card--alerta .unit-btn { background: rgba(232,184,75,0.08); color: var(--accent-gold); border: 1px solid rgba(232,184,75,0.15); }
+        .unit-card--alerta .unit-btn:hover { background: rgba(232,184,75,0.14); border-color: rgba(232,184,75,0.3); }
+
+        /* ==========================================
            DETAIL SECTIONS
-           ============================================= */
-        .detail-alt { background: var(--neutral-50); }
+           ========================================== */
+        .detail-section { border-top: 1px solid var(--border-light); }
 
         .detail-grid {
             display: grid; grid-template-columns: 1fr 1fr;
@@ -507,350 +420,263 @@
         @media (max-width: 868px) { .detail-grid.reverse .detail-visual { order: 0; } }
 
         .detail-content h2 { margin-bottom: 1.25rem; }
-        .detail-content > p { font-size: 1rem; line-height: 1.8; margin-bottom: 0; }
+        .detail-content > p { font-size: 0.95rem; line-height: 1.8; }
 
-        .detail-list {
-            list-style: none; margin: 1.5rem 0 2rem;
-        }
+        .detail-list { list-style: none; margin: 1.5rem 0 2rem; }
         .detail-list li {
-            padding: 0.65rem 0 0.65rem 2rem; position: relative;
-            font-size: 0.92rem; color: var(--text-muted);
-            border-bottom: 1px solid var(--neutral-200);
+            padding: 0.6rem 0 0.6rem 1.75rem; position: relative;
+            font-size: 0.88rem; color: var(--text-body);
+            border-bottom: 1px solid var(--border-light);
             transition: all var(--transition);
         }
         .detail-list li:last-child { border-bottom: none; }
-        .detail-list li:hover { padding-left: 2.5rem; color: var(--text); }
+        .detail-list li:hover { padding-left: 2.25rem; color: var(--text-dark); }
         .detail-list li::before {
             content: ''; position: absolute; left: 0; top: 50%;
-            transform: translateY(-50%); width: 10px; height: 10px;
+            transform: translateY(-50%); width: 6px; height: 6px;
             border-radius: 50%; transition: all var(--transition);
         }
-        .detail-list li:hover::before { transform: translateY(-50%) scale(1.3); }
 
-        .detail--tecnipro .detail-list li::before { background: var(--accent); box-shadow: 0 0 0 3px rgba(77,168,218,0.15); }
-        .detail--jro .detail-list li::before { background: var(--green); box-shadow: 0 0 0 3px rgba(46,204,113,0.15); }
-        .detail--alerta .detail-list li::before { background: var(--sky); box-shadow: 0 0 0 3px rgba(91,188,230,0.15); }
+        .detail--tecnipro .detail-list li::before { background: var(--accent-blue); box-shadow: 0 0 8px rgba(77,168,218,0.3); }
+        .detail--jro .detail-list li::before { background: var(--accent-green); box-shadow: 0 0 8px rgba(46,204,113,0.3); }
+        .detail--alerta .detail-list li::before { background: var(--accent-gold); box-shadow: 0 0 8px rgba(232,184,75,0.3); }
 
         .detail-cta {
             display: inline-flex; align-items: center; gap: 0.5rem;
-            padding: 0.8rem 1.8rem; border-radius: 12px;
-            font-weight: 700; font-size: 0.92rem; color: var(--white);
-            transition: all var(--transition); position: relative;
+            padding: 0.7rem 1.6rem; border-radius: 10px;
+            font-weight: 500; font-size: 0.88rem;
+            transition: all var(--transition); letter-spacing: 0.5px;
         }
-        .detail-cta:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-        }
-        .detail-cta svg { width: 16px; height: 16px; }
+        .detail-cta svg { width: 14px; height: 14px; }
+        .detail-cta:hover { transform: translateY(-2px); }
 
-        .detail--tecnipro .detail-cta { background: var(--accent); }
-        .detail--tecnipro .detail-cta:hover { background: var(--accent-hover); box-shadow: 0 8px 25px rgba(77,168,218,0.35); }
-        .detail--jro .detail-cta { background: var(--green); }
-        .detail--jro .detail-cta:hover { background: var(--green-hover); box-shadow: 0 8px 25px rgba(46,204,113,0.35); }
-        .detail--alerta .detail-cta { background: var(--accent); }
-        .detail--alerta .detail-cta:hover { background: var(--accent-hover); box-shadow: 0 8px 25px rgba(77,168,218,0.35); }
+        .detail--tecnipro .detail-cta { background: rgba(77,168,218,0.1); color: var(--accent-blue); border: 1px solid rgba(77,168,218,0.2); }
+        .detail--tecnipro .detail-cta:hover { background: rgba(77,168,218,0.15); box-shadow: 0 8px 25px rgba(77,168,218,0.12); }
+        .detail--jro .detail-cta { background: rgba(46,204,113,0.1); color: var(--accent-green); border: 1px solid rgba(46,204,113,0.2); }
+        .detail--jro .detail-cta:hover { background: rgba(46,204,113,0.15); box-shadow: 0 8px 25px rgba(46,204,113,0.12); }
+        .detail--alerta .detail-cta { background: rgba(232,184,75,0.1); color: var(--accent-gold); border: 1px solid rgba(232,184,75,0.2); }
+        .detail--alerta .detail-cta:hover { background: rgba(232,184,75,0.15); box-shadow: 0 8px 25px rgba(232,184,75,0.12); }
 
-        /* Visual panels — Premium */
+        /* Visual panels */
         .detail-visual {
-            border-radius: 20px; overflow: hidden;
-            box-shadow: 0 25px 60px rgba(0,0,0,0.1);
-            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
+            background: var(--surface-light); border: 1px solid var(--border-light);
+            border-radius: var(--radius); overflow: hidden;
+            transition: all 0.5s cubic-bezier(0.22,1,0.36,1);
         }
         .detail-visual:hover {
-            transform: translateY(-6px) rotate(-0.5deg);
-            box-shadow: 0 35px 70px rgba(0,0,0,0.14);
+            transform: translateY(-4px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.08);
+            border-color: var(--border-hover-light);
         }
 
         .visual-header {
-            padding: 1.1rem 1.5rem; display: flex;
+            padding: 1rem 1.5rem; display: flex;
             justify-content: space-between; align-items: center;
-            color: var(--white); position: relative; overflow: hidden;
-        }
-        .visual-header::after {
-            content: ''; position: absolute; top: 0; right: 0;
-            width: 100px; height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.08));
+            border-bottom: 1px solid var(--border-light);
         }
         .visual-header h4 {
-            color: var(--white); font-size: 0.95rem;
-            font-family: 'Inter', sans-serif; font-weight: 700;
+            color: var(--text-dark); font-size: 0.88rem;
+            font-weight: 500; letter-spacing: 1px;
         }
         .visual-live {
             display: flex; align-items: center; gap: 0.4rem;
-            font-size: 0.72rem; font-weight: 800; color: #4ADE80;
-            letter-spacing: 0.05em;
+            font-size: 0.65rem; font-weight: 600; letter-spacing: 2px;
         }
         .visual-live::before {
-            content: ''; width: 6px; height: 6px; border-radius: 50%;
-            background: #4ADE80; animation: pulse-dot 2s infinite;
+            content: ''; width: 5px; height: 5px; border-radius: 50%;
+            animation: pulse-dot 2s infinite;
         }
+        .visual-live--blue { color: var(--accent-blue); }
+        .visual-live--blue::before { background: var(--accent-blue); }
+        .visual-live--green { color: var(--accent-green); }
+        .visual-live--green::before { background: var(--accent-green); }
+        .visual-live--gold { color: var(--accent-gold); }
+        .visual-live--gold::before { background: var(--accent-gold); }
 
-        .visual-body {
-            padding: 1.5rem; background: var(--white);
-        }
+        .visual-body { padding: 1.5rem; }
 
-        .kpi-row {
-            display: grid; grid-template-columns: repeat(3, 1fr);
-            gap: 0.75rem; margin-bottom: 1.25rem;
-        }
+        .kpi-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; margin-bottom: 1.25rem; }
         .kpi {
             text-align: center; padding: 1rem 0.5rem;
-            background: var(--neutral-50); border-radius: 12px;
-            border: 1px solid var(--neutral-200);
-            transition: all var(--transition);
+            background: var(--bg-light); border: 1px solid var(--border-light);
+            border-radius: 10px; transition: all var(--transition);
         }
-        .kpi:hover { border-color: var(--accent); transform: translateY(-2px); }
+        .kpi:hover { border-color: var(--border-hover-light); }
         .kpi-val {
-            display: block; font-size: 1.6rem; font-weight: 900;
-            color: var(--primary); line-height: 1;
-            font-family: 'Montserrat', sans-serif;
+            display: block; font-size: 1.5rem; font-weight: 600;
+            line-height: 1;
         }
-        .kpi-lbl { display: block; font-size: 0.68rem; color: var(--text-muted); margin-top: 0.3rem; font-weight: 500; }
+        .kpi-val--blue { color: var(--accent-blue); }
+        .kpi-val--green { color: var(--accent-green); }
+        .kpi-val--gold { color: var(--accent-gold); }
+        .kpi-lbl { display: block; font-size: 0.65rem; color: var(--text-muted); margin-top: 0.3rem; letter-spacing: 1px; }
 
-        /* Chart bars with gradient */
-        .chart-bars {
-            display: flex; gap: 6px; align-items: flex-end;
-            height: 90px; padding-top: 0.5rem;
-        }
-        .bar {
-            flex: 1; border-radius: 6px 6px 0 0;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-        }
-        .bar:hover { transform: scaleY(1.12); transform-origin: bottom; filter: brightness(1.15); }
-        .bar::after {
-            content: ''; position: absolute; top: 0; left: 0; right: 0;
-            height: 50%; background: linear-gradient(to bottom, rgba(255,255,255,0.25), transparent);
-            border-radius: 6px 6px 0 0;
-        }
-
-        /* Courses grid */
         .courses-mini { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.5rem; }
         .course-tag {
-            font-size: 0.78rem; font-weight: 600;
-            padding: 0.55rem 0.75rem; background: var(--neutral-50);
-            border-radius: 10px; color: var(--text-muted);
-            text-align: center; border: 1px solid var(--neutral-200);
-            transition: all var(--transition);
+            font-size: 0.72rem; font-weight: 500; padding: 0.5rem 0.75rem;
+            background: var(--bg-light); border: 1px solid var(--border-light);
+            border-radius: 8px; color: var(--text-body); text-align: center;
+            transition: all var(--transition); letter-spacing: 0.5px;
         }
-        .course-tag:hover { border-color: var(--accent); color: var(--accent); background: rgba(77,168,218,0.04); }
+        .course-tag:hover { border-color: rgba(77,168,218,0.3); color: var(--accent-blue); }
 
-        /* Alert features */
-        .alert-features-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.6rem; }
+        .chart-bars { display: flex; gap: 5px; align-items: flex-end; height: 80px; }
+        .bar {
+            flex: 1; border-radius: 4px 4px 0 0;
+            transition: all 0.4s cubic-bezier(0.22,1,0.36,1);
+        }
+        .bar:hover { transform: scaleY(1.1); transform-origin: bottom; filter: brightness(1.2); }
+
+        .alert-features-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.5rem; }
         .alert-feat {
-            display: flex; align-items: center; gap: 0.6rem;
-            font-size: 0.8rem; font-weight: 600; padding: 0.65rem 0.8rem;
-            background: var(--neutral-50); border-radius: 10px;
-            color: var(--text-muted); border: 1px solid var(--neutral-200);
-            transition: all var(--transition);
+            display: flex; align-items: center; gap: 0.5rem;
+            font-size: 0.75rem; font-weight: 500; padding: 0.6rem 0.7rem;
+            background: var(--bg-light); border: 1px solid var(--border-light);
+            border-radius: 8px; color: var(--text-body);
+            transition: all var(--transition); letter-spacing: 0.5px;
         }
-        .alert-feat:hover { border-color: var(--sky); transform: translateX(4px); }
+        .alert-feat:hover { border-color: rgba(232,184,75,0.3); transform: translateX(3px); }
         .alert-feat-icon {
-            width: 30px; height: 30px; border-radius: 8px;
+            width: 28px; height: 28px; border-radius: 6px;
             display: flex; align-items: center; justify-content: center;
-            font-size: 0.95rem; flex-shrink: 0;
-            background: rgba(77,168,218,0.08);
+            font-size: 0.85rem; flex-shrink: 0;
+            background: rgba(232,184,75,0.06);
         }
 
-        /* =============================================
-           INFO PLACEHOLDER — Animated border
-           ============================================= */
+        /* ==========================================
+           INFO PLACEHOLDER
+           ========================================== */
         .info-wrapper {
-            position: relative; padding: 3px; border-radius: 20px;
-            background: linear-gradient(135deg, var(--accent), var(--green), var(--sky), var(--accent));
-            background-size: 300% 300%;
-            animation: gradient-border 6s ease infinite;
-        }
-        @keyframes gradient-border {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+            position: relative; padding: 1px; border-radius: 16px;
+            background: linear-gradient(135deg, rgba(77,168,218,0.15), rgba(46,204,113,0.15), rgba(232,184,75,0.15));
         }
         .info-placeholder {
             text-align: center; padding: 3.5rem 2rem;
-            background: var(--white); border-radius: 18px;
+            background: var(--surface-light); border-radius: 15px;
         }
-        .info-placeholder h3 { margin-bottom: 0.5rem; }
-        .info-placeholder p { margin: 0; }
 
-        /* =============================================
-           CREDENTIALS — Dark section with glow
-           ============================================= */
-        .credentials {
-            background: linear-gradient(160deg, #050E1A 0%, var(--primary) 40%, var(--primary-mid) 100%);
-            color: var(--white); position: relative; overflow: hidden;
-        }
-        .credentials::before {
-            content: ''; position: absolute; top: -50%; right: -25%;
-            width: 60%; height: 200%;
-            background: radial-gradient(circle, rgba(77,168,218,0.07) 0%, transparent 50%);
-            pointer-events: none;
-        }
+        /* ==========================================
+           CREDENTIALS
+           ========================================== */
+        .credentials { border-top: 1px solid var(--border-light); }
 
         .cred-grid {
             display: grid; grid-template-columns: repeat(4, 1fr);
-            gap: 1.5rem; margin-bottom: 3rem; position: relative; z-index: 1;
+            gap: 1.25rem; margin-bottom: 3rem;
         }
         @media (max-width: 768px) { .cred-grid { grid-template-columns: repeat(2, 1fr); } }
 
         .cred-item {
             text-align: center; padding: 2rem 1rem;
-            background: rgba(255,255,255,0.03);
-            border: 1px solid rgba(255,255,255,0.06);
-            border-radius: 16px; transition: all var(--transition);
-            position: relative; overflow: hidden;
+            background: var(--surface-light); border: 1px solid var(--border-light);
+            border-radius: var(--radius); transition: all var(--transition);
         }
-        .cred-item::before {
-            content: ''; position: absolute; inset: 0;
-            background: linear-gradient(135deg, rgba(77,168,218,0.05), transparent);
-            opacity: 0; transition: opacity var(--transition);
-        }
-        .cred-item:hover {
-            border-color: rgba(77,168,218,0.2);
-            transform: translateY(-4px);
-        }
-        .cred-item:hover::before { opacity: 1; }
+        .cred-item:hover { border-color: var(--border-hover-light); transform: translateY(-4px); box-shadow: 0 15px 40px rgba(0,0,0,0.06); }
 
         .cred-number {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 2.75rem; font-weight: 900; line-height: 1;
-            background: linear-gradient(135deg, var(--accent), var(--sky));
+            font-size: 2.5rem; font-weight: 600; line-height: 1;
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-green));
             -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-            background-clip: text; position: relative; z-index: 1;
+            background-clip: text;
         }
-        .cred-label {
-            font-size: 0.85rem; color: rgba(255,255,255,0.5);
-            margin-top: 0.4rem; position: relative; z-index: 1;
-        }
+        .cred-label { font-size: 0.78rem; color: var(--text-muted); margin-top: 0.4rem; letter-spacing: 1px; }
 
-        .cert-row {
-            display: flex; flex-wrap: wrap; justify-content: center;
-            gap: 1rem; position: relative; z-index: 1;
-        }
+        .cert-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem; }
         .cert-badge {
             display: flex; align-items: center; gap: 0.5rem;
-            padding: 0.6rem 1.2rem;
-            background: rgba(255,255,255,0.04);
-            border: 1px solid rgba(255,255,255,0.08);
-            border-radius: 30px; font-size: 0.82rem; font-weight: 600;
-            color: rgba(255,255,255,0.7); transition: all var(--transition);
+            padding: 0.5rem 1.1rem; background: var(--surface-light);
+            border: 1px solid var(--border-light); border-radius: 30px;
+            font-size: 0.75rem; font-weight: 500;
+            color: var(--text-body); transition: all var(--transition);
+            letter-spacing: 0.5px;
         }
-        .cert-badge:hover {
-            background: rgba(255,255,255,0.08);
-            border-color: rgba(77,168,218,0.3);
-            color: var(--white);
-        }
+        .cert-badge:hover { border-color: var(--border-hover-light); color: var(--text-dark); }
         .cert-icon {
-            width: 26px; height: 26px; border-radius: 50%;
+            width: 22px; height: 22px; border-radius: 50%;
             display: flex; align-items: center; justify-content: center;
-            font-size: 0.65rem; font-weight: 900;
+            font-size: 0.6rem; font-weight: 700;
         }
 
-        /* =============================================
-           CLIENTS CAROUSEL
-           ============================================= */
-        .clients-section { overflow: hidden; }
+        /* ==========================================
+           CLIENTS
+           ========================================== */
+        .clients-section { border-top: 1px solid var(--border-light); overflow: hidden; }
         .clients-track-wrapper { overflow: hidden; margin-top: 2rem; }
-        .clients-track {
-            display: flex; width: max-content;
-            animation: scrollTrack 40s linear infinite;
-        }
+        .clients-track { display: flex; width: max-content; animation: scrollTrack 45s linear infinite; }
         .clients-track:hover { animation-play-state: paused; }
-        @keyframes scrollTrack {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-        }
+        @keyframes scrollTrack { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
         .client-chip {
-            flex-shrink: 0; padding: 0.7rem 1.4rem; margin: 0 0.4rem;
-            background: var(--white); border: 1px solid var(--neutral-200);
-            border-radius: 30px; font-size: 0.82rem; font-weight: 600;
+            flex-shrink: 0; padding: 0.6rem 1.2rem; margin: 0 0.35rem;
+            background: var(--surface-light); border: 1px solid var(--border-light);
+            border-radius: 30px; font-size: 0.78rem; font-weight: 400;
             color: var(--text-muted); white-space: nowrap;
-            transition: all var(--transition);
+            transition: all var(--transition); letter-spacing: 0.5px;
         }
-        .client-chip:hover {
-            border-color: var(--accent); color: var(--accent);
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(77,168,218,0.12);
-        }
+        .client-chip:hover { border-color: var(--border-hover-light); color: var(--text-dark); transform: translateY(-2px); }
 
-        /* =============================================
-           CONTACT — Split layout
-           ============================================= */
-        .contact-section { background: var(--neutral-50); }
-        .contact-grid {
-            display: grid; grid-template-columns: 1fr 1fr;
-            gap: 3rem; align-items: start;
-        }
+        /* ==========================================
+           CONTACT
+           ========================================== */
+        .contact-section { border-top: 1px solid var(--border-light); }
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
         @media (max-width: 768px) { .contact-grid { grid-template-columns: 1fr; } }
 
         .contact-info h2 { margin-bottom: 1rem; }
-
-        .contact-channels { margin-top: 2rem; display: flex; flex-direction: column; gap: 1rem; }
+        .contact-channels { margin-top: 2rem; display: flex; flex-direction: column; gap: 0.75rem; }
         .contact-ch {
-            display: flex; align-items: center; gap: 1rem;
-            padding: 1rem; background: var(--white);
-            border: 1px solid var(--neutral-200); border-radius: 14px;
-            transition: all var(--transition);
+            display: flex; align-items: center; gap: 1rem; padding: 0.9rem 1rem;
+            background: var(--surface-light); border: 1px solid var(--border-light);
+            border-radius: 12px; transition: all var(--transition);
         }
-        .contact-ch:hover {
-            border-color: var(--accent); transform: translateX(6px);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.04);
-        }
+        .contact-ch:hover { border-color: var(--border-hover-light); transform: translateX(4px); }
         .contact-ch-icon {
-            width: 42px; height: 42px; background: var(--primary);
-            border-radius: 12px; display: flex; align-items: center;
-            justify-content: center; flex-shrink: 0;
+            width: 38px; height: 38px; border-radius: 10px;
+            display: flex; align-items: center; justify-content: center; flex-shrink: 0;
         }
-        .contact-ch-icon svg { width: 20px; height: 20px; }
-        .contact-ch-text { font-size: 0.92rem; color: var(--text); font-weight: 600; }
+        .contact-ch-icon svg { width: 18px; height: 18px; }
+        .contact-ch-text { font-size: 0.88rem; color: var(--text-dark); font-weight: 400; }
 
         .contact-form {
-            background: var(--white); padding: 2.5rem;
-            border-radius: 20px; border: 1px solid var(--neutral-200);
-            box-shadow: 0 10px 40px rgba(0,0,0,0.04);
+            background: var(--surface-light); padding: 2.5rem;
+            border-radius: 16px; border: 1px solid var(--border-light);
         }
-        .contact-form h3 { font-size: 1.2rem; margin-bottom: 1.5rem; }
-
+        .contact-form h3 { font-weight: 500; margin-bottom: 1.5rem; letter-spacing: 2px; }
         .form-group { margin-bottom: 1rem; }
-        .form-group label {
-            display: block; font-size: 0.82rem; font-weight: 700;
-            color: var(--text); margin-bottom: 0.35rem;
-        }
+        .form-group label { display: block; font-size: 0.75rem; font-weight: 500; color: var(--text-muted); margin-bottom: 0.35rem; letter-spacing: 1px; text-transform: uppercase; }
         .form-group input, .form-group textarea, .form-group select {
-            width: 100%; padding: 0.7rem 1rem;
-            border: 1.5px solid var(--neutral-200); border-radius: 12px;
-            font-family: 'Inter', sans-serif; font-size: 0.9rem;
-            background: var(--neutral-50); color: var(--text);
+            width: 100%; padding: 0.65rem 0.9rem;
+            border: 1px solid var(--border-light); border-radius: 10px;
+            font-family: 'Montserrat', sans-serif; font-size: 0.88rem; font-weight: 300;
+            background: var(--white); color: var(--text-dark);
             transition: all var(--transition); outline: none;
         }
         .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
-            border-color: var(--accent);
-            box-shadow: 0 0 0 4px rgba(77,168,218,0.08);
-            background: var(--white);
+            border-color: rgba(77,168,218,0.4);
+            box-shadow: 0 0 0 3px rgba(77,168,218,0.08);
         }
-        .form-group textarea { resize: vertical; min-height: 90px; }
+        .form-group textarea { resize: vertical; min-height: 80px; }
+        .form-group select option { background: var(--white); color: var(--text-dark); }
 
         .form-submit {
-            width: 100%; padding: 0.85rem; margin-top: 0.5rem;
-            background: var(--primary); color: var(--white);
-            border: none; border-radius: 12px;
-            font-family: 'Inter', sans-serif; font-size: 0.95rem;
-            font-weight: 700; cursor: pointer;
-            transition: all var(--transition);
+            width: 100%; padding: 0.8rem; margin-top: 0.5rem;
+            background: rgba(77,168,218,0.1); color: var(--accent-blue);
+            border: 1px solid rgba(77,168,218,0.2);
+            border-radius: 10px; font-family: 'Montserrat', sans-serif;
+            font-size: 0.88rem; font-weight: 500; cursor: pointer;
+            transition: all var(--transition); letter-spacing: 1px;
         }
         .form-submit:hover {
-            background: var(--accent);
-            box-shadow: 0 6px 20px rgba(77,168,218,0.25);
-            transform: translateY(-1px);
+            background: rgba(77,168,218,0.15);
+            border-color: rgba(77,168,218,0.35);
+            box-shadow: 0 6px 20px rgba(77,168,218,0.1);
         }
 
-        /* =============================================
+        /* ==========================================
            FOOTER
-           ============================================= */
+           ========================================== */
         footer {
-            background: var(--neutral-800); color: var(--white);
-            padding: 3.5rem 0 1.5rem;
+            background: var(--dark-bg); background: linear-gradient(155deg, #090c12 0%, #0c0e16 50%, #0e0c12 100%);
+            color: var(--dark-text); padding: 3.5rem 0 1.5rem;
         }
         .footer-grid {
             display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
@@ -859,212 +685,128 @@
         @media (max-width: 768px) { .footer-grid { grid-template-columns: 1fr 1fr; gap: 1.5rem; } }
         @media (max-width: 480px) { .footer-grid { grid-template-columns: 1fr; } }
 
-        .footer-brand-text {
-            color: rgba(255,255,255,0.45); font-size: 0.85rem;
-            margin-top: 0.75rem; max-width: 280px; line-height: 1.6;
-        }
+        .footer-brand-text { color: var(--dark-text-dim); font-size: 0.82rem; margin-top: 0.75rem; max-width: 280px; line-height: 1.7; }
         .footer-col h4 {
-            font-size: 0.78rem; font-weight: 800; color: rgba(255,255,255,0.85);
-            text-transform: uppercase; letter-spacing: 0.1em;
-            margin-bottom: 1rem; font-family: 'Inter', sans-serif;
+            font-size: 0.68rem; font-weight: 600; color: var(--dark-text-dim);
+            text-transform: uppercase; letter-spacing: 3px;
+            margin-bottom: 1rem;
         }
         .footer-col a {
-            display: block; font-size: 0.85rem; color: rgba(255,255,255,0.45);
-            padding: 0.3rem 0; transition: all var(--transition);
+            display: block; font-size: 0.82rem; color: var(--dark-text-dim);
+            padding: 0.25rem 0; transition: all var(--transition);
         }
-        .footer-col a:hover { color: var(--accent); padding-left: 4px; }
+        .footer-col a:hover { color: var(--accent-blue); padding-left: 4px; }
         .footer-bottom {
-            padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.07);
-            text-align: center; font-size: 0.78rem; color: rgba(255,255,255,0.25);
+            padding-top: 1.5rem; border-top: 1px solid var(--dark-border);
+            text-align: center; font-size: 0.72rem; color: var(--dark-text-dim);
+            letter-spacing: 1px;
         }
 
-        /* =============================================
+        /* ==========================================
            CHAT WIDGET
-           ============================================= */
+           ========================================== */
         .dc-chat-button {
-            position: fixed; bottom: 24px; right: 24px; height: 54px;
-            background: linear-gradient(135deg, var(--primary), var(--primary-mid));
-            border: none; border-radius: 27px; cursor: pointer;
-            box-shadow: 0 4px 25px rgba(9,30,58,0.35);
+            position: fixed; bottom: 24px; right: 24px; height: 50px;
+            background: var(--dark-surface); border: 1px solid var(--dark-border);
+            border-radius: 25px; cursor: pointer;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
             z-index: 999; display: flex; align-items: center;
-            padding: 0 22px; gap: 8px; transition: all var(--transition);
+            padding: 0 20px; gap: 8px; transition: all var(--transition);
         }
-        .dc-chat-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 30px rgba(77,168,218,0.3);
-            background: linear-gradient(135deg, var(--primary-mid), var(--accent));
-        }
+        .dc-chat-button:hover { border-color: rgba(77,168,218,0.2); transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0,0,0,0.3); }
         .dc-chat-button.open { display: none; }
-        .dc-chat-button .dc-chat-icon { width: 22px; height: 22px; fill: white; }
-        .dc-chat-button .dc-chat-label {
-            color: white; font-weight: 700; font-size: 0.85rem;
-            font-family: 'Inter', sans-serif;
-        }
-        .dc-chat-button .dc-close-icon { display: none; width: 22px; height: 22px; fill: white; }
+        .dc-chat-button .dc-chat-icon { width: 20px; height: 20px; fill: var(--accent-blue); }
+        .dc-chat-button .dc-chat-label { color: var(--dark-text-sec); font-weight: 500; font-size: 0.8rem; font-family: 'Montserrat', sans-serif; letter-spacing: 0.5px; }
+        .dc-chat-button .dc-close-icon { display: none; width: 20px; height: 20px; fill: var(--dark-text-sec); }
         .dc-chat-button.open .dc-chat-icon { display: none; }
         .dc-chat-button.open .dc-close-icon { display: block; }
         .dc-chat-button.open .dc-chat-label { display: none; }
 
         .dc-chat-window {
-            position: fixed; bottom: 92px; right: 24px;
-            width: 400px; height: 520px;
-            background: var(--white); border-radius: 20px;
-            box-shadow: 0 25px 60px rgba(0,0,0,0.15);
-            display: none; flex-direction: column;
-            overflow: hidden; z-index: 998;
-            border: 1px solid var(--neutral-200);
-            animation: chat-open 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: fixed; bottom: 88px; right: 24px;
+            width: 380px; height: 500px;
+            background: var(--dark-bg-solid); border-radius: 16px;
+            box-shadow: 0 25px 60px rgba(0,0,0,0.4);
+            display: none; flex-direction: column; overflow: hidden;
+            z-index: 998; border: 1px solid var(--dark-border);
         }
         .dc-chat-window.open { display: flex; }
-        @keyframes chat-open {
-            from { opacity: 0; transform: translateY(10px) scale(0.97); }
-            to { opacity: 1; transform: translateY(0) scale(1); }
-        }
 
-        .dc-chat-header {
-            background: linear-gradient(135deg, var(--primary), var(--primary-mid));
-            padding: 14px 16px; display: flex; align-items: center; gap: 10px;
-        }
+        .dc-chat-header { background: var(--dark-surface); padding: 12px 16px; display: flex; align-items: center; gap: 10px; border-bottom: 1px solid var(--dark-border); }
         .dc-chat-avatar {
-            width: 38px; height: 38px;
-            background: linear-gradient(135deg, var(--accent), var(--sky));
-            border-radius: 12px; display: flex; align-items: center;
-            justify-content: center; position: relative;
+            width: 36px; height: 36px; background: rgba(77,168,218,0.1);
+            border: 1px solid rgba(77,168,218,0.2);
+            border-radius: 10px; display: flex; align-items: center; justify-content: center;
         }
-        .dc-chat-avatar svg { width: 22px; height: 22px; }
+        .dc-chat-avatar svg { height: 14px; width: auto; }
         .dc-chat-header-info { flex: 1; }
-        .dc-chat-header-info h4 {
-            margin: 0; font-size: 0.88rem; font-weight: 700;
-            color: #fff; font-family: 'Inter', sans-serif;
-        }
-        .dc-chat-header-info p { margin: 2px 0 0; font-size: 0.7rem; color: rgba(255,255,255,0.55); }
-        .dc-chat-status {
-            width: 7px; height: 7px; background: #4ADE80;
-            border-radius: 50%; margin-right: 4px;
-            animation: pulse-dot 2s infinite;
-        }
-        .dc-chat-close {
-            background: none; border: none; color: rgba(255,255,255,0.5);
-            cursor: pointer; padding: 4px; display: flex;
-            border-radius: 8px; transition: all var(--transition);
-        }
-        .dc-chat-close:hover { color: white; background: rgba(255,255,255,0.1); }
-        .dc-chat-close svg { width: 18px; height: 18px; }
+        .dc-chat-header-info h4 { font-size: 0.82rem; font-weight: 500; color: var(--dark-text); letter-spacing: 1px; }
+        .dc-chat-header-info p { font-size: 0.65rem; color: var(--dark-text-dim); margin: 2px 0 0; }
+        .dc-chat-status { width: 6px; height: 6px; background: var(--accent-green); border-radius: 50%; animation: pulse-dot 2s infinite; }
+        .dc-chat-close { background: none; border: none; color: var(--dark-text-dim); cursor: pointer; padding: 4px; display: flex; border-radius: 6px; transition: all var(--transition); }
+        .dc-chat-close:hover { color: var(--dark-text); background: rgba(255,255,255,0.05); }
+        .dc-chat-close svg { width: 16px; height: 16px; }
 
-        .dc-chat-messages {
-            flex: 1; overflow-y: auto; padding: 14px;
-            background: var(--neutral-50); display: flex;
-            flex-direction: column; gap: 10px;
-        }
-        .dc-chat-message {
-            max-width: 85%; padding: 10px 14px; border-radius: 14px;
-            font-size: 0.85rem; line-height: 1.55; word-wrap: break-word;
-        }
-        .dc-chat-message a { color: var(--accent); text-decoration: underline; }
-        .dc-chat-message.user {
-            background: linear-gradient(135deg, var(--primary), var(--primary-mid));
-            color: white; align-self: flex-end; border-bottom-right-radius: 4px;
-        }
-        .dc-chat-message.user a { color: #93C5FD; }
-        .dc-chat-message.bot {
-            background: white; color: var(--text); align-self: flex-start;
-            border-bottom-left-radius: 4px;
-            box-shadow: 0 1px 4px rgba(0,0,0,0.06);
-        }
-        .dc-chat-message.typing { background: white; align-self: flex-start; box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
+        .dc-chat-messages { flex: 1; overflow-y: auto; padding: 14px; display: flex; flex-direction: column; gap: 10px; }
+        .dc-chat-message { max-width: 85%; padding: 10px 14px; border-radius: 12px; font-size: 0.82rem; line-height: 1.55; word-wrap: break-word; }
+        .dc-chat-message a { color: var(--accent-blue); text-decoration: underline; }
+        .dc-chat-message.user { background: rgba(77,168,218,0.1); border: 1px solid rgba(77,168,218,0.15); color: var(--dark-text); align-self: flex-end; border-bottom-right-radius: 4px; }
+        .dc-chat-message.bot { background: var(--dark-surface); border: 1px solid var(--dark-border); color: var(--dark-text); align-self: flex-start; border-bottom-left-radius: 4px; }
+        .dc-chat-message.typing { background: var(--dark-surface); border: 1px solid var(--dark-border); align-self: flex-start; }
         .dc-typing-dots { display: flex; gap: 4px; padding: 4px 0; }
-        .dc-typing-dots span {
-            width: 7px; height: 7px; background: var(--accent);
-            border-radius: 50%; animation: typeBounce 1.4s infinite;
-        }
+        .dc-typing-dots span { width: 6px; height: 6px; background: var(--accent-blue); border-radius: 50%; animation: typeBounce 1.4s infinite; }
         .dc-typing-dots span:nth-child(2) { animation-delay: 0.2s; }
         .dc-typing-dots span:nth-child(3) { animation-delay: 0.4s; }
-        @keyframes typeBounce { 0%,60%,100% { transform: translateY(0); } 30% { transform: translateY(-4px); } }
+        @keyframes typeBounce { 0%,60%,100% { transform: translateY(0); } 30% { transform: translateY(-3px); } }
 
-        .dc-chat-input-container {
-            padding: 10px 14px; background: white;
-            border-top: 1px solid var(--neutral-200);
-            display: flex; gap: 8px;
-        }
+        .dc-chat-input-container { padding: 10px 12px; border-top: 1px solid var(--dark-border); display: flex; gap: 8px; }
         .dc-chat-input {
-            flex: 1; border: 1.5px solid var(--neutral-200);
-            border-radius: 20px; padding: 9px 16px;
-            font-size: 0.85rem; outline: none;
-            font-family: 'Inter', sans-serif;
-            background: var(--neutral-50);
+            flex: 1; border: 1px solid var(--dark-border); border-radius: 20px;
+            padding: 8px 14px; font-size: 0.82rem; outline: none;
+            font-family: 'Montserrat', sans-serif; font-weight: 300;
+            background: rgba(255,255,255,0.03); color: var(--dark-text);
             transition: all var(--transition);
         }
-        .dc-chat-input:focus { border-color: var(--accent); background: white; }
+        .dc-chat-input:focus { border-color: rgba(77,168,218,0.3); }
         .dc-chat-send {
-            width: 38px; height: 38px;
-            background: linear-gradient(135deg, var(--primary), var(--primary-mid));
-            border: none; border-radius: 50%; cursor: pointer;
-            display: flex; align-items: center; justify-content: center;
+            width: 34px; height: 34px; background: rgba(77,168,218,0.1);
+            border: 1px solid rgba(77,168,218,0.2); border-radius: 50%;
+            cursor: pointer; display: flex; align-items: center; justify-content: center;
             transition: all var(--transition); flex-shrink: 0;
         }
-        .dc-chat-send:hover { background: linear-gradient(135deg, var(--accent), var(--accent-hover)); transform: scale(1.05); }
-        .dc-chat-send:disabled { opacity: 0.4; cursor: not-allowed; }
-        .dc-chat-send svg { width: 16px; height: 16px; fill: white; }
-        .dc-chat-footer {
-            padding: 6px; text-align: center; font-size: 0.65rem;
-            color: var(--text-muted); background: var(--neutral-50);
-            border-top: 1px solid var(--neutral-200);
-        }
+        .dc-chat-send:hover { background: rgba(77,168,218,0.15); }
+        .dc-chat-send:disabled { opacity: 0.3; cursor: not-allowed; }
+        .dc-chat-send svg { width: 14px; height: 14px; fill: var(--accent-blue); }
+        .dc-chat-footer { padding: 6px; text-align: center; font-size: 0.6rem; color: var(--dark-text-dim); border-top: 1px solid var(--dark-border); letter-spacing: 1px; }
 
         @media (max-width: 480px) {
-            .dc-chat-window { right: 8px; left: 8px; width: auto; bottom: 82px; height: 70vh; max-height: 480px; border-radius: 16px; }
+            .dc-chat-window { right: 8px; left: 8px; width: auto; bottom: 78px; height: 70vh; max-height: 460px; }
             .dc-chat-button { bottom: 16px; right: 16px; }
         }
 
-        /* =============================================
+        /* ==========================================
            SCROLL ANIMATIONS
-           ============================================= */
-        .reveal {
-            opacity: 0; transform: translateY(32px);
-            transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1), transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
-        }
+           ========================================== */
+        .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s cubic-bezier(0.22,1,0.36,1), transform 0.7s cubic-bezier(0.22,1,0.36,1); }
         .reveal.visible { opacity: 1; transform: translateY(0); }
-        .reveal-delay-1 { transition-delay: 0.1s; }
-        .reveal-delay-2 { transition-delay: 0.2s; }
-        .reveal-delay-3 { transition-delay: 0.3s; }
-
-        .reveal-scale {
-            opacity: 0; transform: scale(0.92);
-            transition: opacity 0.6s, transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .reveal-scale.visible { opacity: 1; transform: scale(1); }
-
-        /* Parallax helper */
-        [data-parallax] { transition: transform 0.1s linear; }
-
-        /* Smooth counter animation */
-        .counter-animate {
-            display: inline-block;
-            transition: all 0.3s;
-        }
+        .reveal-d1 { transition-delay: 0.1s; }
+        .reveal-d2 { transition-delay: 0.2s; }
+        .reveal-d3 { transition-delay: 0.3s; }
     </style>
 </head>
 <body>
+
     <!-- HEADER -->
     <header id="header">
         <div class="nav-inner">
             <a href="#" class="logo">
-                <div class="logo-symbol">
-                    <svg viewBox="0 0 120 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <defs>
-                            <linearGradient id="inf-grad" x1="0" y1="30" x2="120" y2="30">
-                                <stop offset="0%" stop-color="#4DA8DA"/>
-                                <stop offset="45%" stop-color="#2ECC71"/>
-                                <stop offset="100%" stop-color="#E8B84B"/>
-                            </linearGradient>
-                        </defs>
-                        <!-- Artistic infinity — organic, slightly asymmetric, fully closed -->
-                        <path class="logo-infinity-path" d="M16 30 C16 17 27 9 37 18 C43 24 50 30 60 30 C70 30 77 24 83 18 C93 9 104 17 104 30 C104 43 93 51 83 42 C77 36 70 30 60 30 C50 30 43 36 37 42 C27 51 16 43 16 30Z" stroke="url(#inf-grad)" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                        <!-- Inner echo — same shape, thinner, subtle -->
-                        <path d="M16 30 C16 17 27 9 37 18 C43 24 50 30 60 30 C70 30 77 24 83 18 C93 9 104 17 104 30 C104 43 93 51 83 42 C77 36 70 30 60 30 C50 30 43 36 37 42 C27 51 16 43 16 30Z" stroke="url(#inf-grad)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.25"/>
-                    </svg>
-                </div>
-                <span class="logo-text">Duo<span>Capital</span></span>
+                <svg viewBox="0 0 420 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs><linearGradient id="inf-h" x1="0" y1="38" x2="120" y2="38"><stop offset="0%" stop-color="#4DA8DA"/><stop offset="55%" stop-color="#2ECC71"/><stop offset="100%" stop-color="#E8B84B"/></linearGradient></defs>
+                    <path class="logo-infinity-path" d="M22 38 C22 26 30 20 38 28 C43 33 49 38 56 38 C63 38 69 32 76 25 C90 10 112 18 112 38 C112 60 88 68 74 52 C67 44 61 39 54 39 C47 39 40 46 34 51 C26 58 20 52 22 38Z" stroke="url(#inf-h)" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                    <path d="M22 38 C22 26 30 20 38 28 C43 33 49 38 56 38" stroke="url(#inf-h)" stroke-width="1.8" stroke-linecap="round" fill="none" opacity="0.5"/>
+                    <path d="M34 51 C26 58 20 52 22 42" stroke="#4DA8DA" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.35"/>
+                    <text x="132" y="46" font-family="Montserrat, sans-serif" font-weight="300" font-size="22" fill="#ebebf2" letter-spacing="5">DUOCAPITAL</text>
+                </svg>
             </a>
             <ul class="nav-links">
                 <li><a href="#unidades" class="nav-link">Unidades</a></li>
@@ -1074,21 +816,16 @@
                 <li><a href="#contacto" class="nav-link">Contacto</a></li>
                 <li><a href="#contacto" class="nav-cta">Hablemos</a></li>
             </ul>
-            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
-                <span></span><span></span><span></span>
-            </button>
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú"><span></span><span></span><span></span></button>
         </div>
     </header>
 
     <!-- MOBILE MENU -->
     <div class="mobile-menu" id="mobileMenu">
         <div class="mobile-menu-header">
-            <div class="logo">
-                <div class="logo-symbol">
-                    <svg viewBox="0 0 120 60" fill="none"><defs><linearGradient id="inf-grad-m" x1="0" y1="30" x2="120" y2="30"><stop offset="0%" stop-color="#4DA8DA"/><stop offset="45%" stop-color="#2ECC71"/><stop offset="100%" stop-color="#E8B84B"/></linearGradient></defs><path d="M16 30 C16 17 27 9 37 18 C43 24 50 30 60 30 C70 30 77 24 83 18 C93 9 104 17 104 30 C104 43 93 51 83 42 C77 36 70 30 60 30 C50 30 43 36 37 42 C27 51 16 43 16 30Z" stroke="url(#inf-grad-m)" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
-                </div>
-                <span class="logo-text">Duo<span>Capital</span></span>
-            </div>
+            <a href="#" class="logo">
+                <svg viewBox="0 0 420 80" fill="none" style="height:32px; width:auto;"><defs><linearGradient id="inf-m" x1="0" y1="38" x2="120" y2="38"><stop offset="0%" stop-color="#4DA8DA"/><stop offset="55%" stop-color="#2ECC71"/><stop offset="100%" stop-color="#E8B84B"/></linearGradient></defs><path d="M22 38 C22 26 30 20 38 28 C43 33 49 38 56 38 C63 38 69 32 76 25 C90 10 112 18 112 38 C112 60 88 68 74 52 C67 44 61 39 54 39 C47 39 40 46 34 51 C26 58 20 52 22 38Z" stroke="url(#inf-m)" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M22 38 C22 26 30 20 38 28 C43 33 49 38 56 38" stroke="url(#inf-m)" stroke-width="1.8" stroke-linecap="round" fill="none" opacity="0.5"/><text x="132" y="46" font-family="Montserrat, sans-serif" font-weight="300" font-size="22" fill="#ebebf2" letter-spacing="5">DUOCAPITAL</text></svg>
+            </a>
             <button class="mobile-menu-close" id="menuClose" aria-label="Cerrar">&times;</button>
         </div>
         <nav class="mobile-menu-nav">
@@ -1103,12 +840,6 @@
     <!-- HERO -->
     <section class="hero">
         <div class="hero-bg"></div>
-        <div class="hero-shapes">
-            <div class="hero-shape"></div>
-            <div class="hero-shape"></div>
-            <div class="hero-shape"></div>
-            <div class="hero-shape"></div>
-        </div>
         <div class="container hero-content">
             <div class="hero-eyebrow">Capacitación &middot; Consultoría &middot; Tecnología</div>
             <h1>Soluciones profesionales para <span class="hero-gradient-text">organizaciones que quieren avanzar</span></h1>
@@ -1118,34 +849,31 @@
                 que su organización no solo funcione, sino que lidere.
             </p>
             <div class="hero-actions">
-                <a href="#unidades" class="btn-hero btn-hero--primary">
+                <a href="#unidades" class="btn btn--primary">
                     Conoce nuestras soluciones
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
                 </a>
-                <a href="#contacto" class="btn-hero btn-hero--ghost">
-                    Hablemos
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </a>
+                <a href="#contacto" class="btn btn--ghost">Hablemos</a>
             </div>
             <div class="trust-bar">
                 <div class="trust-item">
                     <div class="trust-number" data-count="15" data-suffix="+">0</div>
-                    <div class="trust-label">Años de experiencia</div>
+                    <div class="trust-label">AÑOS EXPERIENCIA</div>
                 </div>
                 <div class="trust-item">
                     <div class="trust-number" data-count="50" data-suffix="+">0</div>
-                    <div class="trust-label">Organizaciones atendidas</div>
+                    <div class="trust-label">ORGANIZACIONES</div>
                 </div>
                 <div class="trust-item">
                     <div class="trust-number" data-count="97" data-suffix="%">0</div>
-                    <div class="trust-label">Satisfacción de clientes</div>
+                    <div class="trust-label">SATISFACCIÓN</div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- UNIDADES -->
-    <section id="unidades" class="section units-bg">
+    <section id="unidades" class="section">
         <div class="container">
             <div class="section-header reveal">
                 <div class="section-badge">Nuestras Unidades</div>
@@ -1153,51 +881,36 @@
                 <p class="section-sub">Cada unidad opera con autonomía y el respaldo de pertenecer al ecosistema DuoCapital.</p>
             </div>
             <div class="units-grid">
-                <div class="unit-card unit-card--tecnipro reveal reveal-delay-1">
-                    <div class="unit-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-                    </div>
+                <div class="unit-card unit-card--tecnipro reveal reveal-d1">
+                    <div class="unit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
                     <div class="unit-tag">Capacitación SENCE</div>
                     <h3>Instituto Tecnipro</h3>
                     <div class="unit-tagline">Formación que transforma equipos</div>
                     <p class="unit-desc">OTEC registrado en SENCE. Cursos de Excel, Power BI, IA Generativa y más, con instructores certificados y plataforma e-learning propia.</p>
-                    <a href="#tecnipro" class="unit-btn">
-                        Conocer más
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                    </a>
+                    <a href="#tecnipro" class="unit-btn">Conocer más <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
                 </div>
-                <div class="unit-card unit-card--jro reveal reveal-delay-2">
-                    <div class="unit-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
-                    </div>
+                <div class="unit-card unit-card--jro reveal reveal-d2">
+                    <div class="unit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div>
                     <div class="unit-tag">Consultoría & Datos</div>
                     <h3>JRO Asesorías</h3>
                     <div class="unit-tagline">Datos que impulsan decisiones</div>
                     <p class="unit-desc">Consultoría en Power BI, IA generativa, finanzas corporativas y automatización. Experiencia en sector público y privado.</p>
-                    <a href="#jro" class="unit-btn">
-                        Conocer más
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                    </a>
+                    <a href="#jro" class="unit-btn">Conocer más <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
                 </div>
-                <div class="unit-card unit-card--alerta reveal reveal-delay-3">
-                    <div class="unit-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
-                    </div>
+                <div class="unit-card unit-card--alerta reveal reveal-d3">
+                    <div class="unit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></div>
                     <div class="unit-tag">Tecnología Municipal</div>
                     <h3>Alerta Municipal y Comunal</h3>
                     <div class="unit-tagline">Tu municipio conectado en tiempo real</div>
                     <p class="unit-desc">Plataforma de alertas sísmicas, farmacias de turno, seguridad y más. Notificaciones directas a vecinos vía WhatsApp.</p>
-                    <a href="#alerta" class="unit-btn">
-                        Conocer más
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                    </a>
+                    <a href="#alerta" class="unit-btn">Conocer más <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- TECNIPRO -->
-    <section id="tecnipro" class="section detail--tecnipro">
+    <section id="tecnipro" class="section detail-section detail--tecnipro">
         <div class="container">
             <div class="detail-grid">
                 <div class="detail-content reveal">
@@ -1212,21 +925,18 @@
                         <li>IA Generativa aplicada al trabajo</li>
                         <li>Normativas y cumplimiento regulatorio</li>
                     </ul>
-                    <a href="https://www.tecnipro.cl" target="_blank" rel="noopener" class="detail-cta">
-                        Ver catálogo de cursos
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
-                    </a>
+                    <a href="https://www.tecnipro.cl" target="_blank" rel="noopener" class="detail-cta">Ver catálogo de cursos <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a>
                 </div>
-                <div class="detail-visual reveal-scale" data-parallax="0.03">
-                    <div class="visual-header" style="background: linear-gradient(135deg, #4DA8DA, #3A8FBE);">
-                        <h4>Programa Capacitación 2026</h4>
-                        <span class="visual-live">SENCE 100%</span>
+                <div class="detail-visual reveal reveal-d2">
+                    <div class="visual-header">
+                        <h4>Programa 2026</h4>
+                        <span class="visual-live visual-live--blue">SENCE 100%</span>
                     </div>
                     <div class="visual-body">
                         <div class="kpi-row">
-                            <div class="kpi"><span class="kpi-val">6</span><span class="kpi-lbl">Módulos</span></div>
-                            <div class="kpi"><span class="kpi-val">40h</span><span class="kpi-lbl">Duración</span></div>
-                            <div class="kpi"><span class="kpi-val">3</span><span class="kpi-lbl">Modalidades</span></div>
+                            <div class="kpi"><span class="kpi-val kpi-val--blue">6</span><span class="kpi-lbl">MÓDULOS</span></div>
+                            <div class="kpi"><span class="kpi-val kpi-val--blue">40h</span><span class="kpi-lbl">DURACIÓN</span></div>
+                            <div class="kpi"><span class="kpi-val kpi-val--blue">3</span><span class="kpi-lbl">MODALIDADES</span></div>
                         </div>
                         <div class="courses-mini">
                             <div class="course-tag">Excel Avanzado</div>
@@ -1243,11 +953,11 @@
     </section>
 
     <!-- JRO -->
-    <section id="jro" class="section detail-alt detail--jro">
+    <section id="jro" class="section detail-section detail--jro">
         <div class="container">
             <div class="detail-grid reverse">
                 <div class="detail-content reveal">
-                    <div class="section-badge" style="background: rgba(46,204,113,0.1); color: var(--green); border-color: rgba(46,204,113,0.15);">JRO Asesorías</div>
+                    <div class="section-badge" style="background: rgba(46,204,113,0.06); border-color: rgba(46,204,113,0.12); color: var(--accent-green);">JRO Asesorías</div>
                     <h2>Consultoría en datos, IA y transformación digital</h2>
                     <p>Convertimos datos en decisiones estratégicas. Dashboards personalizados, automatización de procesos y soluciones de inteligencia artificial aplicadas a su negocio.</p>
                     <ul class="detail-list">
@@ -1257,30 +967,27 @@
                         <li>Automatización con Power Automate</li>
                         <li>Gobierno de datos y compliance</li>
                     </ul>
-                    <a href="https://www.jroasesorias.cl" target="_blank" rel="noopener" class="detail-cta" style="background: var(--green);">
-                        Solicitar propuesta
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
-                    </a>
+                    <a href="https://www.jroasesorias.cl" target="_blank" rel="noopener" class="detail-cta">Solicitar propuesta <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a>
                 </div>
-                <div class="detail-visual reveal-scale" data-parallax="0.03">
-                    <div class="visual-header" style="background: linear-gradient(135deg, #2ECC71, #27AE60);">
-                        <h4>Panel de Control Ejecutivo</h4>
-                        <span class="visual-live">TIEMPO REAL</span>
+                <div class="detail-visual reveal reveal-d2">
+                    <div class="visual-header">
+                        <h4>Panel Ejecutivo</h4>
+                        <span class="visual-live visual-live--green">TIEMPO REAL</span>
                     </div>
                     <div class="visual-body">
                         <div class="kpi-row">
-                            <div class="kpi"><span class="kpi-val">85%</span><span class="kpi-lbl">Eficiencia</span></div>
-                            <div class="kpi"><span class="kpi-val">$2.4M</span><span class="kpi-lbl">Ahorro anual</span></div>
-                            <div class="kpi"><span class="kpi-val">3.2x</span><span class="kpi-lbl">Velocidad</span></div>
+                            <div class="kpi"><span class="kpi-val kpi-val--green">85%</span><span class="kpi-lbl">EFICIENCIA</span></div>
+                            <div class="kpi"><span class="kpi-val kpi-val--green">$2.4M</span><span class="kpi-lbl">AHORRO</span></div>
+                            <div class="kpi"><span class="kpi-val kpi-val--green">3.2x</span><span class="kpi-lbl">VELOCIDAD</span></div>
                         </div>
                         <div class="chart-bars">
-                            <div class="bar" style="height:55%; background: linear-gradient(to top, #2ECC71, #5EDBA0);"></div>
-                            <div class="bar" style="height:78%; background: linear-gradient(to top, #2ECC71, #5EDBA0);"></div>
-                            <div class="bar" style="height:42%; background: linear-gradient(to top, #2ECC71, #5EDBA0);"></div>
-                            <div class="bar" style="height:91%; background: linear-gradient(to top, #2ECC71, #5EDBA0);"></div>
-                            <div class="bar" style="height:65%; background: linear-gradient(to top, #2ECC71, #5EDBA0);"></div>
-                            <div class="bar" style="height:83%; background: linear-gradient(to top, #2ECC71, #5EDBA0);"></div>
-                            <div class="bar" style="height:72%; background: linear-gradient(to top, #2ECC71, #5EDBA0);"></div>
+                            <div class="bar" style="height:55%; background: linear-gradient(to top, rgba(46,204,113,0.6), rgba(46,204,113,0.2));"></div>
+                            <div class="bar" style="height:78%; background: linear-gradient(to top, rgba(46,204,113,0.7), rgba(46,204,113,0.25));"></div>
+                            <div class="bar" style="height:42%; background: linear-gradient(to top, rgba(46,204,113,0.5), rgba(46,204,113,0.15));"></div>
+                            <div class="bar" style="height:91%; background: linear-gradient(to top, rgba(46,204,113,0.8), rgba(46,204,113,0.3));"></div>
+                            <div class="bar" style="height:65%; background: linear-gradient(to top, rgba(46,204,113,0.6), rgba(46,204,113,0.2));"></div>
+                            <div class="bar" style="height:83%; background: linear-gradient(to top, rgba(46,204,113,0.75), rgba(46,204,113,0.25));"></div>
+                            <div class="bar" style="height:72%; background: linear-gradient(to top, rgba(46,204,113,0.65), rgba(46,204,113,0.2));"></div>
                         </div>
                     </div>
                 </div>
@@ -1289,11 +996,11 @@
     </section>
 
     <!-- ALERTA MUNICIPAL -->
-    <section id="alerta" class="section detail--alerta">
+    <section id="alerta" class="section detail-section detail--alerta">
         <div class="container">
             <div class="detail-grid">
                 <div class="detail-content reveal">
-                    <div class="section-badge" style="background: rgba(91,188,230,0.1); color: #3A8FBE; border-color: rgba(91,188,230,0.15);">Alerta Municipal y Comunal</div>
+                    <div class="section-badge" style="background: rgba(232,184,75,0.06); border-color: rgba(232,184,75,0.12); color: var(--accent-gold);">Alerta Municipal y Comunal</div>
                     <h2>Tu municipio conectado con sus vecinos</h2>
                     <p>Plataforma web que integra APIs públicas chilenas para entregar alertas y servicios útiles a la comunidad. MVP operativo con piloto en Zapallar. Notificaciones directas vía WhatsApp.</p>
                     <ul class="detail-list">
@@ -1305,19 +1012,14 @@
                         <li>Notificaciones WhatsApp a vecinos</li>
                     </ul>
                     <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
-                        <a href="https://alertamunicipal.cl" target="_blank" rel="noopener" class="detail-cta">
-                            Ver demo en vivo
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
-                        </a>
-                        <a href="#contacto" class="detail-cta" style="background: var(--primary);">
-                            Quiero AlertaMunicipal
-                        </a>
+                        <a href="https://alertamunicipal.cl" target="_blank" rel="noopener" class="detail-cta">Ver demo en vivo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a>
+                        <a href="#contacto" class="detail-cta" style="background: rgba(77,168,218,0.1); color: var(--accent-blue); border-color: rgba(77,168,218,0.2);">Quiero AlertaMunicipal</a>
                     </div>
                 </div>
-                <div class="detail-visual reveal-scale" data-parallax="0.03">
-                    <div class="visual-header" style="background: linear-gradient(135deg, #5BBCE6, #4DA8DA);">
+                <div class="detail-visual reveal reveal-d2">
+                    <div class="visual-header">
                         <h4>AlertaMunicipal</h4>
-                        <span class="visual-live">PILOTO ZAPALLAR</span>
+                        <span class="visual-live visual-live--gold">PILOTO ZAPALLAR</span>
                     </div>
                     <div class="visual-body">
                         <div class="alert-features-grid">
@@ -1334,10 +1036,10 @@
         </div>
     </section>
 
-    <!-- INFO PLACEHOLDER -->
-    <section class="section detail-alt">
+    <!-- INFO -->
+    <section class="section">
         <div class="container">
-            <div class="info-wrapper reveal-scale">
+            <div class="info-wrapper reveal">
                 <div class="info-placeholder">
                     <h3>Recursos para empresas y municipios</h3>
                     <p class="section-sub" style="margin: 0.5rem auto 0;">Pronto publicaremos guías, casos de estudio y herramientas gratuitas para potenciar su organización.</p>
@@ -1350,33 +1052,21 @@
     <section class="section credentials">
         <div class="container">
             <div class="section-header reveal">
-                <div class="section-badge" style="background: rgba(77,168,218,0.12); color: var(--accent); border-color: rgba(77,168,218,0.2);">Trayectoria</div>
-                <h2 style="color: var(--white);">Resultados que respaldan nuestra experiencia</h2>
+                <div class="section-badge">Trayectoria</div>
+                <h2>Resultados que respaldan nuestra experiencia</h2>
             </div>
             <div class="cred-grid">
-                <div class="cred-item reveal reveal-delay-1">
-                    <div class="cred-number" data-count="15" data-suffix="+">0</div>
-                    <div class="cred-label">Años de experiencia</div>
-                </div>
-                <div class="cred-item reveal reveal-delay-1">
-                    <div class="cred-number" data-count="50" data-suffix="+">0</div>
-                    <div class="cred-label">Organizaciones atendidas</div>
-                </div>
-                <div class="cred-item reveal reveal-delay-2">
-                    <div class="cred-number" data-count="97" data-suffix="%">0</div>
-                    <div class="cred-label">Satisfacción cliente</div>
-                </div>
-                <div class="cred-item reveal reveal-delay-3">
-                    <div class="cred-number" data-count="3" data-suffix="">0</div>
-                    <div class="cred-label">Unidades especializadas</div>
-                </div>
+                <div class="cred-item reveal reveal-d1"><div class="cred-number" data-count="15" data-suffix="+">0</div><div class="cred-label">AÑOS EXPERIENCIA</div></div>
+                <div class="cred-item reveal reveal-d1"><div class="cred-number" data-count="50" data-suffix="+">0</div><div class="cred-label">ORGANIZACIONES</div></div>
+                <div class="cred-item reveal reveal-d2"><div class="cred-number" data-count="97" data-suffix="%">0</div><div class="cred-label">SATISFACCIÓN</div></div>
+                <div class="cred-item reveal reveal-d3"><div class="cred-number" data-count="3" data-suffix="">0</div><div class="cred-label">UNIDADES</div></div>
             </div>
             <div class="cert-row reveal">
-                <div class="cert-badge"><span class="cert-icon" style="background: rgba(77,168,218,0.2); color: var(--accent);">MS</span>Microsoft Certified</div>
-                <div class="cert-badge"><span class="cert-icon" style="background: rgba(220,38,38,0.15); color: #EF4444;">S</span>SENCE Acreditado</div>
-                <div class="cert-badge"><span class="cert-icon" style="background: rgba(168,85,247,0.15); color: #A855F7;">H</span>Harvard Business</div>
-                <div class="cert-badge"><span class="cert-icon" style="background: rgba(232,184,75,0.15); color: var(--warm);">M</span>MIT Professional</div>
-                <div class="cert-badge"><span class="cert-icon" style="background: rgba(46,204,113,0.15); color: var(--green);">C</span>Cambridge English</div>
+                <div class="cert-badge"><span class="cert-icon" style="background: rgba(77,168,218,0.15); color: var(--accent-blue);">MS</span>Microsoft Certified</div>
+                <div class="cert-badge"><span class="cert-icon" style="background: rgba(239,68,68,0.12); color: #EF4444;">S</span>SENCE Acreditado</div>
+                <div class="cert-badge"><span class="cert-icon" style="background: rgba(168,85,247,0.12); color: #A855F7;">H</span>Harvard Business</div>
+                <div class="cert-badge"><span class="cert-icon" style="background: rgba(232,184,75,0.12); color: var(--accent-gold);">M</span>MIT Professional</div>
+                <div class="cert-badge"><span class="cert-icon" style="background: rgba(46,204,113,0.12); color: var(--accent-green);">C</span>Cambridge English</div>
             </div>
         </div>
     </section>
@@ -1391,34 +1081,8 @@
         </div>
         <div class="clients-track-wrapper">
             <div class="clients-track">
-                <div class="client-chip">Ministerio de Obras Públicas</div>
-                <div class="client-chip">Pontificia Universidad Católica</div>
-                <div class="client-chip">Universidad Andrés Bello</div>
-                <div class="client-chip">Fuerza Aérea de Chile</div>
-                <div class="client-chip">Armada de Chile</div>
-                <div class="client-chip">DHL</div>
-                <div class="client-chip">APL Logistics</div>
-                <div class="client-chip">ACHS</div>
-                <div class="client-chip">Hospital Militar</div>
-                <div class="client-chip">Colun</div>
-                <div class="client-chip">BancoEstado Corredores</div>
-                <div class="client-chip">Ripley</div>
-                <div class="client-chip">DIRECTEMAR</div>
-                <div class="client-chip">ProChile</div>
-                <div class="client-chip">Ministerio de Obras Públicas</div>
-                <div class="client-chip">Pontificia Universidad Católica</div>
-                <div class="client-chip">Universidad Andrés Bello</div>
-                <div class="client-chip">Fuerza Aérea de Chile</div>
-                <div class="client-chip">Armada de Chile</div>
-                <div class="client-chip">DHL</div>
-                <div class="client-chip">APL Logistics</div>
-                <div class="client-chip">ACHS</div>
-                <div class="client-chip">Hospital Militar</div>
-                <div class="client-chip">Colun</div>
-                <div class="client-chip">BancoEstado Corredores</div>
-                <div class="client-chip">Ripley</div>
-                <div class="client-chip">DIRECTEMAR</div>
-                <div class="client-chip">ProChile</div>
+                <div class="client-chip">Ministerio de Obras Públicas</div><div class="client-chip">Pontificia Universidad Católica</div><div class="client-chip">Universidad Andrés Bello</div><div class="client-chip">Fuerza Aérea de Chile</div><div class="client-chip">Armada de Chile</div><div class="client-chip">DHL</div><div class="client-chip">APL Logistics</div><div class="client-chip">ACHS</div><div class="client-chip">Hospital Militar</div><div class="client-chip">Colun</div><div class="client-chip">BancoEstado Corredores</div><div class="client-chip">Ripley</div><div class="client-chip">DIRECTEMAR</div><div class="client-chip">ProChile</div>
+                <div class="client-chip">Ministerio de Obras Públicas</div><div class="client-chip">Pontificia Universidad Católica</div><div class="client-chip">Universidad Andrés Bello</div><div class="client-chip">Fuerza Aérea de Chile</div><div class="client-chip">Armada de Chile</div><div class="client-chip">DHL</div><div class="client-chip">APL Logistics</div><div class="client-chip">ACHS</div><div class="client-chip">Hospital Militar</div><div class="client-chip">Colun</div><div class="client-chip">BancoEstado Corredores</div><div class="client-chip">Ripley</div><div class="client-chip">DIRECTEMAR</div><div class="client-chip">ProChile</div>
             </div>
         </div>
     </section>
@@ -1430,43 +1094,32 @@
                 <div class="contact-info reveal">
                     <div class="section-badge">Contacto</div>
                     <h2>Conversemos sobre su próximo proyecto</h2>
-                    <p>Ya sea capacitación, consultoría o tecnología municipal, estamos listos para ayudarle a encontrar la solución adecuada.</p>
+                    <p>Ya sea capacitación, consultoría o tecnología municipal, estamos listos para ayudarle.</p>
                     <div class="contact-channels">
                         <a href="mailto:info@duocapital.cl" class="contact-ch">
-                            <div class="contact-ch-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-                            </div>
+                            <div class="contact-ch-icon" style="background: rgba(77,168,218,0.08); border: 1px solid rgba(77,168,218,0.15);"><svg viewBox="0 0 24 24" fill="none" stroke="#4DA8DA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></div>
                             <span class="contact-ch-text">info@duocapital.cl</span>
                         </a>
                         <a href="tel:+56966895746" class="contact-ch">
-                            <div class="contact-ch-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                            </div>
+                            <div class="contact-ch-icon" style="background: rgba(46,204,113,0.08); border: 1px solid rgba(46,204,113,0.15);"><svg viewBox="0 0 24 24" fill="none" stroke="#2ECC71" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
                             <span class="contact-ch-text">+56 9 6689 5746</span>
                         </a>
                         <a href="https://wa.me/56966895746" target="_blank" rel="noopener" class="contact-ch">
-                            <div class="contact-ch-icon" style="background: #25D366;">
-                                <svg viewBox="0 0 24 24" fill="white" width="20" height="20"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.025.507 3.932 1.396 5.608L0 24l6.597-1.371A11.946 11.946 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.88 0-3.63-.53-5.12-1.449l-.368-.218-3.808.998.998-3.648-.24-.38A9.956 9.956 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
-                            </div>
+                            <div class="contact-ch-icon" style="background: rgba(37,211,102,0.08); border: 1px solid rgba(37,211,102,0.15);"><svg viewBox="0 0 24 24" fill="#25D366" width="18" height="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.025.507 3.932 1.396 5.608L0 24l6.597-1.371A11.946 11.946 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.88 0-3.63-.53-5.12-1.449l-.368-.218-3.808.998.998-3.648-.24-.38A9.956 9.956 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg></div>
                             <span class="contact-ch-text">WhatsApp directo</span>
                         </a>
                         <div class="contact-ch">
-                            <div class="contact-ch-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-                            </div>
+                            <div class="contact-ch-icon" style="background: rgba(232,184,75,0.08); border: 1px solid rgba(232,184,75,0.15);"><svg viewBox="0 0 24 24" fill="none" stroke="#E8B84B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></div>
                             <span class="contact-ch-text">Chile</span>
                         </div>
                     </div>
                 </div>
-                <div class="contact-form reveal reveal-delay-2">
+                <div class="contact-form reveal reveal-d2">
                     <h3>Envíenos un mensaje</h3>
                     <form id="contactForm" onsubmit="return handleContactForm(event)">
                         <div class="form-group"><label for="cf-name">Nombre</label><input type="text" id="cf-name" required placeholder="Su nombre completo"></div>
-                        <div class="form-group"><label for="cf-email">Correo electrónico</label><input type="email" id="cf-email" required placeholder="correo@empresa.cl"></div>
-                        <div class="form-group">
-                            <label for="cf-unit">Área de interés</label>
-                            <select id="cf-unit"><option value="">Seleccione...</option><option value="tecnipro">Capacitación (Tecnipro)</option><option value="jro">Consultoría (JRO Asesorías)</option><option value="alerta">Alerta Municipal</option><option value="general">Consulta general</option></select>
-                        </div>
+                        <div class="form-group"><label for="cf-email">Correo</label><input type="email" id="cf-email" required placeholder="correo@empresa.cl"></div>
+                        <div class="form-group"><label for="cf-unit">Área de interés</label><select id="cf-unit"><option value="">Seleccione...</option><option value="tecnipro">Capacitación (Tecnipro)</option><option value="jro">Consultoría (JRO Asesorías)</option><option value="alerta">Alerta Municipal</option><option value="general">Consulta general</option></select></div>
                         <div class="form-group"><label for="cf-message">Mensaje</label><textarea id="cf-message" placeholder="Cuéntenos brevemente qué necesita"></textarea></div>
                         <button type="submit" class="form-submit">Enviar mensaje</button>
                     </form>
@@ -1480,273 +1133,96 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <div class="logo logo--dark" style="margin-bottom: 0.5rem;">
-                        <div class="logo-symbol">
-                            <svg viewBox="0 0 120 60" fill="none"><defs><linearGradient id="inf-grad-f" x1="0" y1="30" x2="120" y2="30"><stop offset="0%" stop-color="#4DA8DA"/><stop offset="45%" stop-color="#2ECC71"/><stop offset="100%" stop-color="#E8B84B"/></linearGradient></defs><path class="logo-infinity-path" d="M16 30 C16 17 27 9 37 18 C43 24 50 30 60 30 C70 30 77 24 83 18 C93 9 104 17 104 30 C104 43 93 51 83 42 C77 36 70 30 60 30 C50 30 43 36 37 42 C27 51 16 43 16 30Z" stroke="url(#inf-grad-f)" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
-                        </div>
-                        <span class="logo-text">Duo<span>Capital</span></span>
-                    </div>
+                    <a href="#" class="logo">
+                        <svg viewBox="0 0 420 80" fill="none" style="height:32px; width:auto;"><defs><linearGradient id="inf-f" x1="0" y1="38" x2="120" y2="38"><stop offset="0%" stop-color="#4DA8DA"/><stop offset="55%" stop-color="#2ECC71"/><stop offset="100%" stop-color="#E8B84B"/></linearGradient></defs><path class="logo-infinity-path" d="M22 38 C22 26 30 20 38 28 C43 33 49 38 56 38 C63 38 69 32 76 25 C90 10 112 18 112 38 C112 60 88 68 74 52 C67 44 61 39 54 39 C47 39 40 46 34 51 C26 58 20 52 22 38Z" stroke="url(#inf-f)" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M22 38 C22 26 30 20 38 28 C43 33 49 38 56 38" stroke="url(#inf-f)" stroke-width="1.8" stroke-linecap="round" fill="none" opacity="0.5"/><path d="M34 51 C26 58 20 52 22 42" stroke="#4DA8DA" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.35"/><text x="132" y="46" font-family="Montserrat, sans-serif" font-weight="300" font-size="22" fill="#ebebf2" letter-spacing="5">DUOCAPITAL</text></svg>
+                    </a>
                     <p class="footer-brand-text">Capacitación, consultoría y tecnología municipal. Tres unidades especializadas con un solo respaldo.</p>
                 </div>
-                <div class="footer-col">
-                    <h4>Unidades</h4>
-                    <a href="#tecnipro">Instituto Tecnipro</a>
-                    <a href="#jro">JRO Asesorías</a>
-                    <a href="#alerta">Alerta Municipal</a>
-                </div>
-                <div class="footer-col">
-                    <h4>Sitios</h4>
-                    <a href="https://www.tecnipro.cl" target="_blank" rel="noopener">tecnipro.cl</a>
-                    <a href="https://www.jroasesorias.cl" target="_blank" rel="noopener">jroasesorias.cl</a>
-                    <a href="https://alertamunicipal.cl" target="_blank" rel="noopener">alertamunicipal.cl</a>
-                </div>
-                <div class="footer-col">
-                    <h4>Contacto</h4>
-                    <a href="mailto:info@duocapital.cl">info@duocapital.cl</a>
-                    <a href="tel:+56966895746">+56 9 6689 5746</a>
-                    <a href="https://wa.me/56966895746" target="_blank" rel="noopener">WhatsApp</a>
-                </div>
+                <div class="footer-col"><h4>Unidades</h4><a href="#tecnipro">Instituto Tecnipro</a><a href="#jro">JRO Asesorías</a><a href="#alerta">Alerta Municipal</a></div>
+                <div class="footer-col"><h4>Sitios</h4><a href="https://www.tecnipro.cl" target="_blank" rel="noopener">tecnipro.cl</a><a href="https://www.jroasesorias.cl" target="_blank" rel="noopener">jroasesorias.cl</a><a href="https://alertamunicipal.cl" target="_blank" rel="noopener">alertamunicipal.cl</a></div>
+                <div class="footer-col"><h4>Contacto</h4><a href="mailto:info@duocapital.cl">info@duocapital.cl</a><a href="tel:+56966895746">+56 9 6689 5746</a><a href="https://wa.me/56966895746" target="_blank" rel="noopener">WhatsApp</a></div>
             </div>
-            <div class="footer-bottom">&copy; 2026 DuoCapital. Todos los derechos reservados.</div>
+            <div class="footer-bottom">&copy; 2026 DUOCAPITAL &middot; Todos los derechos reservados</div>
         </div>
     </footer>
 
-    <!-- CHAT WIDGET -->
+    <!-- CHAT -->
     <button class="dc-chat-button" id="dcChatButton" aria-label="Abrir chat">
-        <svg class="dc-chat-icon" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" fill="white"/></svg>
+        <svg class="dc-chat-icon" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
         <span class="dc-chat-label">Conversemos</span>
-        <svg class="dc-close-icon" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" fill="white"/></svg>
+        <svg class="dc-close-icon" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
     </button>
     <div class="dc-chat-window" id="dcChatWindow">
         <div class="dc-chat-header">
             <div class="dc-chat-avatar">
-                <svg viewBox="0 0 120 60" fill="none" style="width:26px; height:14px;"><path d="M15 30 C15 18 25 10 35 18 C42 23 48 30 60 30 C72 30 78 23 85 18 C95 10 105 18 105 30 C105 42 95 50 85 42 C78 37 72 30 60 30 C48 30 42 37 35 42 C25 50 15 42 15 30Z" stroke="rgba(255,255,255,0.9)" stroke-width="5" stroke-linecap="round" fill="none"/></svg>
+                <svg viewBox="0 0 120 80" fill="none" style="height:14px; width:auto;"><defs><linearGradient id="inf-c" x1="0" y1="38" x2="120" y2="38"><stop offset="0%" stop-color="#4DA8DA"/><stop offset="55%" stop-color="#2ECC71"/><stop offset="100%" stop-color="#E8B84B"/></linearGradient></defs><path d="M22 38 C22 26 30 20 38 28 C43 33 49 38 56 38 C63 38 69 32 76 25 C90 10 112 18 112 38 C112 60 88 68 74 52 C67 44 61 39 54 39 C47 39 40 46 34 51 C26 58 20 52 22 38Z" stroke="url(#inf-c)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
             </div>
-            <div class="dc-chat-header-info"><h4>Asistente DuoCapital</h4><p>Capacitación, Consultoría y Tecnología</p></div>
+            <div class="dc-chat-header-info"><h4>DUOCAPITAL</h4><p>Asistente virtual</p></div>
             <div class="dc-chat-status"></div>
-            <button class="dc-chat-close" id="dcChatClose" aria-label="Cerrar chat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+            <button class="dc-chat-close" id="dcChatClose" aria-label="Cerrar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
         </div>
         <div class="dc-chat-messages" id="dcChatMessages"></div>
         <div class="dc-chat-input-container">
             <input type="text" class="dc-chat-input" id="dcChatInput" placeholder="Escriba su consulta..." autocomplete="off">
             <button class="dc-chat-send" id="dcChatSend" aria-label="Enviar"><svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg></button>
         </div>
-        <div class="dc-chat-footer">Powered by DuoCapital</div>
+        <div class="dc-chat-footer">DUOCAPITAL</div>
     </div>
 
     <script>
     (function() {
         'use strict';
-
-        // ============================
-        // NAVIGATION
-        // ============================
         var header = document.getElementById('header');
-        var lastScroll = 0;
-
-        window.addEventListener('scroll', function() {
-            header.classList.toggle('scrolled', window.scrollY > 40);
-        }, { passive: true });
+        window.addEventListener('scroll', function() { header.classList.toggle('scrolled', window.scrollY > 40); }, { passive: true });
 
         var menuToggle = document.getElementById('menuToggle');
         var mobileMenu = document.getElementById('mobileMenu');
         var menuClose = document.getElementById('menuClose');
-
         menuToggle.addEventListener('click', function() { mobileMenu.classList.add('active'); });
         menuClose.addEventListener('click', function() { mobileMenu.classList.remove('active'); });
-        document.querySelectorAll('.mobile-menu-nav a').forEach(function(l) {
-            l.addEventListener('click', function() { mobileMenu.classList.remove('active'); });
-        });
+        document.querySelectorAll('.mobile-menu-nav a').forEach(function(l) { l.addEventListener('click', function() { mobileMenu.classList.remove('active'); }); });
 
-        // Smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(function(a) {
-            a.addEventListener('click', function(e) {
-                e.preventDefault();
-                var t = document.querySelector(this.getAttribute('href'));
-                if (t) window.scrollTo({ top: t.offsetTop - 80, behavior: 'smooth' });
-            });
+            a.addEventListener('click', function(e) { e.preventDefault(); var t = document.querySelector(this.getAttribute('href')); if (t) window.scrollTo({ top: t.offsetTop - 80, behavior: 'smooth' }); });
         });
 
-        // ============================
-        // SCROLL REVEAL ANIMATIONS
-        // ============================
-        var revealObserver = new IntersectionObserver(function(entries) {
-            entries.forEach(function(entry) {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    // Don't unobserve — let it stay visible
-                }
-            });
-        }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+        var obs = new IntersectionObserver(function(entries) { entries.forEach(function(e) { if (e.isIntersecting) e.target.classList.add('visible'); }); }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+        document.querySelectorAll('.reveal').forEach(function(el) { obs.observe(el); });
 
-        document.querySelectorAll('.reveal, .reveal-scale').forEach(function(el) {
-            revealObserver.observe(el);
-        });
-
-        // ============================
-        // ANIMATED COUNTERS
-        // ============================
         function animateCounter(el) {
-            var target = parseInt(el.getAttribute('data-count'));
-            var suffix = el.getAttribute('data-suffix') || '';
-            var duration = 1500;
-            var startTime = null;
-
-            function step(timestamp) {
-                if (!startTime) startTime = timestamp;
-                var progress = Math.min((timestamp - startTime) / duration, 1);
-                // Ease out cubic
-                var eased = 1 - Math.pow(1 - progress, 3);
-                var current = Math.floor(eased * target);
-                el.textContent = current + suffix;
-                if (progress < 1) requestAnimationFrame(step);
-            }
+            var target = parseInt(el.getAttribute('data-count')), suffix = el.getAttribute('data-suffix') || '', start = null;
+            function step(ts) { if (!start) start = ts; var p = Math.min((ts - start) / 1500, 1); el.textContent = Math.floor((1 - Math.pow(1 - p, 3)) * target) + suffix; if (p < 1) requestAnimationFrame(step); }
             requestAnimationFrame(step);
         }
+        var cObs = new IntersectionObserver(function(entries) { entries.forEach(function(e) { if (e.isIntersecting && !e.target._c) { e.target._c = true; e.target.querySelectorAll('[data-count]').forEach(animateCounter); } }); }, { threshold: 0.3 });
+        document.querySelectorAll('.trust-bar, .cred-grid').forEach(function(el) { cObs.observe(el); });
 
-        var counterObserver = new IntersectionObserver(function(entries) {
-            entries.forEach(function(entry) {
-                if (entry.isIntersecting && !entry.target._counted) {
-                    entry.target._counted = true;
-                    var counters = entry.target.querySelectorAll('[data-count]');
-                    counters.forEach(function(c) { animateCounter(c); });
-                }
-            });
-        }, { threshold: 0.3 });
-
-        document.querySelectorAll('.trust-bar, .cred-grid').forEach(function(el) {
-            counterObserver.observe(el);
-        });
-
-        // ============================
-        // PARALLAX ON VISUAL PANELS
-        // ============================
-        var parallaxEls = document.querySelectorAll('[data-parallax]');
-        if (parallaxEls.length && window.innerWidth > 768) {
-            window.addEventListener('scroll', function() {
-                var scrollY = window.scrollY;
-                parallaxEls.forEach(function(el) {
-                    var speed = parseFloat(el.getAttribute('data-parallax'));
-                    var rect = el.getBoundingClientRect();
-                    var center = rect.top + rect.height / 2;
-                    var offset = (window.innerHeight / 2 - center) * speed;
-                    el.style.transform = 'translateY(' + offset + 'px)';
-                });
-            }, { passive: true });
-        }
-
-        // ============================
-        // CONTACT FORM
-        // ============================
         window.handleContactForm = function(e) {
-            e.preventDefault();
-            var f = e.target;
-            var name = f.querySelector('#cf-name').value;
-            var email = f.querySelector('#cf-email').value;
-            var unit = f.querySelector('#cf-unit').value;
-            var msg = f.querySelector('#cf-message').value;
-            var subject = encodeURIComponent('Contacto web - ' + name);
-            var body = encodeURIComponent('Nombre: ' + name + '\nEmail: ' + email + '\nÁrea: ' + unit + '\n\nMensaje:\n' + msg);
-            window.location.href = 'mailto:info@duocapital.cl?subject=' + subject + '&body=' + body;
-            return false;
+            e.preventDefault(); var f = e.target;
+            var s = encodeURIComponent('Contacto web - ' + f.querySelector('#cf-name').value);
+            var b = encodeURIComponent('Nombre: ' + f.querySelector('#cf-name').value + '\nEmail: ' + f.querySelector('#cf-email').value + '\nÁrea: ' + f.querySelector('#cf-unit').value + '\n\nMensaje:\n' + f.querySelector('#cf-message').value);
+            window.location.href = 'mailto:info@duocapital.cl?subject=' + s + '&body=' + b; return false;
         };
 
-        // ============================
-        // CHAT WIDGET
-        // ============================
-        var API_ENDPOINT = '/.netlify/functions/chat';
-        var conversationId = 'conv_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
-        var conversationHistory = [];
-        var isConversationEnded = false;
-        var inactivityTimer = null;
+        // CHAT
+        var API = '/.netlify/functions/chat', cId = 'conv_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9), hist = [], ended = false, timer = null;
+        var cBtn = document.getElementById('dcChatButton'), cWin = document.getElementById('dcChatWindow'), msgs = document.getElementById('dcChatMessages'), inp = document.getElementById('dcChatInput'), sBtn = document.getElementById('dcChatSend'), clBtn = document.getElementById('dcChatClose');
 
-        var chatButton = document.getElementById('dcChatButton');
-        var chatWindow = document.getElementById('dcChatWindow');
-        var messagesContainer = document.getElementById('dcChatMessages');
-        var inputField = document.getElementById('dcChatInput');
-        var sendButton = document.getElementById('dcChatSend');
-        var closeButton = document.getElementById('dcChatClose');
+        function toggleChat() { cBtn.classList.toggle('open'); cWin.classList.toggle('open'); if (cWin.classList.contains('open') && hist.length === 0) { setTimeout(function() { addMsg('bot', 'Hola, bienvenido a DuoCapital.\n\nPodemos orientarle sobre:\n\n- Capacitación corporativa (Instituto Tecnipro)\n- Consultoría en datos e IA (JRO Asesorías)\n- Tecnología municipal (Alerta Municipal)\n\nEn qué podemos ayudarle?'); }, 400); } if (cWin.classList.contains('open')) { inp.focus(); resetTimer(); } }
+        function resetTimer() { clearTimeout(timer); timer = setTimeout(function() { if (hist.length > 1 && !ended) endChat('inactivity'); }, 300000); }
+        function addMsg(t, txt) { var d = document.createElement('div'); d.className = 'dc-chat-message ' + t; var c = txt.replace(/\*\*/g,'').replace(/__/g,'').replace(/\*/g,'').replace(/_/g,'').replace(/\n/g,'<br>').replace(/(https?:\/\/[^\s<]+)/g,'<a href="$1" target="_blank" rel="noopener">$1</a>').replace(/([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9._-]+)/g,'<a href="mailto:$1">$1</a>'); d.innerHTML = c; msgs.appendChild(d); msgs.scrollTop = msgs.scrollHeight; hist.push({ role: t === 'user' ? 'user' : 'assistant', content: txt }); resetTimer(); }
+        function showTyp() { var d = document.createElement('div'); d.className = 'dc-chat-message typing'; d.id = 'dcT'; d.innerHTML = '<div class="dc-typing-dots"><span></span><span></span><span></span></div>'; msgs.appendChild(d); msgs.scrollTop = msgs.scrollHeight; }
+        function hideTyp() { var t = document.getElementById('dcT'); if(t) t.remove(); }
+        async function send() { var m = inp.value.trim(); if (!m || ended) return; addMsg('user', m); inp.value = ''; sBtn.disabled = true; showTyp(); try { var r = await fetch(API, { method: 'POST', headers: {'Content-Type':'application/json'}, body: JSON.stringify({ message: m, conversationId: cId, conversationHistory: hist.slice(0,-1), endConversation: false }) }); var d = await r.json(); hideTyp(); if (d.reply) addMsg('bot', d.reply); else if (d.error) addMsg('bot', d.error); } catch(e) { hideTyp(); addMsg('bot', 'Lo siento, hubo un problema. Contáctenos:\n\nWhatsApp: https://wa.me/56966895746\nCorreo: info@duocapital.cl'); } sBtn.disabled = false; inp.focus(); }
+        async function endChat(r) { if (ended || hist.length < 2) return; ended = true; try { await fetch(API, { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ conversationId: cId, conversationHistory: hist, endConversation: true, endReason: r }) }); } catch(e) {} }
 
-        function toggleChat() {
-            chatButton.classList.toggle('open');
-            chatWindow.classList.toggle('open');
-            if (chatWindow.classList.contains('open') && conversationHistory.length === 0) {
-                setTimeout(function() {
-                    addMessage('bot', 'Hola, bienvenido a DuoCapital.\n\nPodemos orientarle sobre:\n\n- Capacitación corporativa (Instituto Tecnipro)\n- Consultoría en datos e IA (JRO Asesorías)\n- Tecnología municipal (Alerta Municipal)\n\nEn qué podemos ayudarle?');
-                }, 400);
-            }
-            if (chatWindow.classList.contains('open')) { inputField.focus(); resetInactivityTimer(); }
-        }
-
-        function resetInactivityTimer() {
-            clearTimeout(inactivityTimer);
-            inactivityTimer = setTimeout(function() {
-                if (conversationHistory.length > 1 && !isConversationEnded) endConversation('inactivity');
-            }, 300000);
-        }
-
-        function addMessage(type, text) {
-            var div = document.createElement('div');
-            div.className = 'dc-chat-message ' + type;
-            var clean = text.replace(/\*\*/g,'').replace(/__/g,'').replace(/\*/g,'').replace(/_/g,'');
-            clean = clean.replace(/\n/g, '<br>');
-            clean = clean.replace(/(https?:\/\/[^\s<]+)/g, '<a href="$1" target="_blank" rel="noopener">$1</a>');
-            clean = clean.replace(/([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9._-]+)/g, '<a href="mailto:$1">$1</a>');
-            div.innerHTML = clean;
-            messagesContainer.appendChild(div);
-            messagesContainer.scrollTop = messagesContainer.scrollHeight;
-            conversationHistory.push({ role: type === 'user' ? 'user' : 'assistant', content: text });
-            resetInactivityTimer();
-        }
-
-        function showTyping() {
-            var d = document.createElement('div');
-            d.className = 'dc-chat-message typing'; d.id = 'dcTypingIndicator';
-            d.innerHTML = '<div class="dc-typing-dots"><span></span><span></span><span></span></div>';
-            messagesContainer.appendChild(d);
-            messagesContainer.scrollTop = messagesContainer.scrollHeight;
-        }
-        function hideTyping() { var t = document.getElementById('dcTypingIndicator'); if(t) t.remove(); }
-
-        async function sendMessage() {
-            var message = inputField.value.trim();
-            if (!message || isConversationEnded) return;
-            addMessage('user', message);
-            inputField.value = ''; sendButton.disabled = true; showTyping();
-            try {
-                var r = await fetch(API_ENDPOINT, {
-                    method: 'POST', headers: {'Content-Type':'application/json'},
-                    body: JSON.stringify({ message: message, conversationId: conversationId, conversationHistory: conversationHistory.slice(0,-1), endConversation: false })
-                });
-                var data = await r.json(); hideTyping();
-                if (data.reply) addMessage('bot', data.reply);
-                else if (data.error) addMessage('bot', data.error);
-            } catch(e) {
-                hideTyping();
-                addMessage('bot', 'Lo siento, hubo un problema técnico. Contáctenos:\n\nWhatsApp: https://wa.me/56966895746\nCorreo: info@duocapital.cl');
-            }
-            sendButton.disabled = false; inputField.focus();
-        }
-
-        async function endConversation(reason) {
-            if (isConversationEnded || conversationHistory.length < 2) return;
-            isConversationEnded = true;
-            try { await fetch(API_ENDPOINT, { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ conversationId: conversationId, conversationHistory: conversationHistory, endConversation: true, endReason: reason }) }); } catch(e) {}
-        }
-
-        chatButton.addEventListener('click', toggleChat);
-        sendButton.addEventListener('click', sendMessage);
-        inputField.addEventListener('keypress', function(e) { if(e.key==='Enter') sendMessage(); });
-        inputField.addEventListener('input', resetInactivityTimer);
-        closeButton.addEventListener('click', function() {
-            if (conversationHistory.length > 1 && !isConversationEnded) endConversation('chat_closed');
-            toggleChat();
-        });
-        window.addEventListener('beforeunload', function() {
-            if (conversationHistory.length > 1 && !isConversationEnded) endConversation('window_close');
-        });
+        cBtn.addEventListener('click', toggleChat);
+        sBtn.addEventListener('click', send);
+        inp.addEventListener('keypress', function(e) { if(e.key==='Enter') send(); });
+        inp.addEventListener('input', resetTimer);
+        clBtn.addEventListener('click', function() { if (hist.length > 1 && !ended) endChat('chat_closed'); toggleChat(); });
+        window.addEventListener('beforeunload', function() { if (hist.length > 1 && !ended) endChat('window_close'); });
         window.toggleChat = toggleChat;
-
     })();
     </script>
 </body>
